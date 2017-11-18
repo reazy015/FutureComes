@@ -1,7 +1,26 @@
+.page-header{
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  outline: 1px solid green;
+}
 .page-header__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.logo-info {
+  outline: 1px solid red;
 }
 .logo-info__header {
     font-family: 'Satisfy', 'Arial', sans-serif;
+}
+.share-link {
+  display: flex;
+  flex-direction: row;
+  outline: 1px solid red;
+}
+.link-list {
+  display: flex;
+  flex-direction: row;
 }
