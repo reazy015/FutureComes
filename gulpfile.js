@@ -35,7 +35,7 @@ gulp.task("style", function() {
 });
 
 gulp.task("minify-images", function () {
-  return gulp.src("images/**/*.{jpg,png,svg}")
+  return gulp.src("img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.jpegtran({
         progressive: true
@@ -57,7 +57,7 @@ gulp.task("create-webp", function () {
 });
 
 gulp.task("create-sprite", function () {
-  return gulp.src("{img/icon-*.svg,img/bg-*.svg,img/text-*.svg}")
+  return gulp.src("{img/icon-*.svg,img/bg-*.svg,img/text-*.svg,img/*.svg}")
     .pipe(svgstore({
       inlineSvg: true
     }))

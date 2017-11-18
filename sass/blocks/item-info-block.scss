@@ -2,4 +2,11 @@
   display: flex;
   flex-direction: row;
   padding-top: 250px;
+  opacity: 1;
+  transition: opacity ease-in 0.5s;
+}
+.item-info__image {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
 }

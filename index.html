@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>FutureComes</title>
+  <link rel="preload" href="fonts/RalewayBold/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/RalewayLight/Raleway-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/RobotoBold/RobotoBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/RobotoRegular/RobotoRegular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Satisfy/Satisfy.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
+  <include src="img/raiting-info.svg"></include>
 
   <!-- Page-header -->
 
@@ -44,94 +50,115 @@
 
   <main class="page-content">
 
-    <!-- Slider-block -->
+    <div class="help-wrapper">
 
-    <div class="slider">
-      <div class="slider__progbar">
+      <!-- Slider-block -->
 
-      </div>
-      <div class="slider__next-btn">
+      <div class="slider">
+        <div class="slider__progbar">
 
-      </div>
-      <div class="slider__prev-btn">
+        </div>
+        <div class="slider__next-btn">
 
-      </div>
-      <ul class="slider-list">
-        <li class="slider-list__item item-info">
+        </div>
+        <div class="slider__prev-btn">
 
-          <div class="item-info">
-            <div class="item-info__description item-descr">
-              <div class="item-select">
-                <form class="item-descr__form" action="#" method="post">
-                  <select>
-                    <option value="1">19.02</option>
-                    <option value="2">22.02</option>
-                    <option value="3">30.02</option>
-                  </select>
-                </form>
-                <p class="item-descr__slogan">Новостройка недели</p>
+        </div>
+        <ul class="slider-list">
+          <li class="slider-list__item slider-list__item--active">
+            <picture>
+              <img class="item-info__image" src="img/slide-image1.png" alt="фото новостройки">
+            </picture>
+            <div class="item-info">
+              <div class="item-info__description item-descr">
+                <div class="item-select">
+                  <form class="item-descr__form" action="#" method="post">
+                    <select>
+                      <option value="1">19.02</option>
+                      <option value="2">22.02</option>
+                      <option value="3">30.02</option>
+                    </select>
+                  </form>
+                  <p class="item-descr__slogan">Новостройка недели</p>
+                </div>
+                <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
+                <p class="item-descr__text">Номинация: «Самые высокие потолки в Девяткино»</p>
+                <a class="item-descr__link"href="#">Узнать больше</a>
+                <div class="share-link">
+                  <p class="share-link__text">Поделиться новостройкой:</p>
+                  <ul class="share-link__list link-list">
+                    <li class="link-list__item">
+                      <a href="#">1</a>
+                    </li>
+                    <li class="link-list__item">
+                      <a href="#">2</a>
+                    </li>
+                    <li class="link-list__item">
+                      <a href="#">3</a>
+                    </li>
+                    <li class="link-list__item">
+                      <a href="#">4</a>
+                    </li>
+                    <li class="link-list__item">
+                      <a href="#">5</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
-              <p class="item-descr__text">Номинация: «Самые высокие потолки в Девяткино»</p>
-              <a class="item-descr__link"href="#">Узнать больше</a>
-              <div class="share-link">
-                <p class="share-link__text">Поделиться новостройкой:</p>
-                <ul class="share-link__list link-list">
-                  <li class="link-list__item">
-                    <a href="#">1</a>
-                  </li>
-                  <li class="link-list__item">
-                    <a href="#">2</a>
-                  </li>
-                  <li class="link-list__item">
-                    <a href="#">3</a>
-                  </li>
-                  <li class="link-list__item">
-                    <a href="#">4</a>
-                  </li>
-                  <li class="link-list__item">
-                    <a href="#">5</a>
-                  </li>
-                </ul>
+
+              <div class="item-info__graph">
+                <svg class="features__icon  features__icon--house" width="540" height="540" aria-labelledby="title-icon-house" role="presentation">
+                  <title id="title-icon-house">Иконка дома</title>
+                  <use xlink:href="#raiting-info"></use>
+                </svg>
               </div>
             </div>
+          </li>
 
-            <div class="item-info__graph">
+          <li class="slider-list__item">
+            <div class="item-info">
+              <div class="item-info__description">
+                  <h2>Второй слайд</h2>
+              </div>
+              <div class="item-info__graph">
 
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="slider-list__item item-info">
-          <div class="item-info">
-            <div class="item-info__description">
+          </li>
 
+          <li class="slider-list__item">
+            <div class="item-info">
+              <div class="item-info__description">
+                  <h2>Третий слайд</h2>
+              </div>
+              <div class="item-info__graph">
+
+              </div>
             </div>
-            <div class="item-info__graph">
+          </li>
+        </ul>
+      </div>
 
+      <!-- About project section -->
+
+      <section class="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-description">
+              <h3 class="about-description__header">Мы готовим крутой сервис по подбору квартиры	в новостройке</h3>
+              <p class="about-description__text">MonApart подберёт подходящие жилые комплексы и покажет, чем они отличаются друг от друга.Если вы никак не решите, где лучше купить квартиру, в Девяткино или в Кудрово, то вам должно понравиться.</p>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- About project section -->
-
-    <section class="about">
-      <div class="container">
-        <div class="about-wrapper">
-          <div class="about-description">
-            <h3 class="about-description__header">Мы готовим крутой сервис по подбору квартиры	в новостройке</h3>
-            <p class="about-description__text">MonApart подберёт подходящие жилые комплексы и покажет, чем они отличаются друг от друга.Если вы никак не решите, где лучше купить квартиру, в Девяткино или в Кудрово, то вам должно понравиться.</p>
-          </div>
-          <div class="about-feedback">
-            <h4 class="about-feedback__header">Поделитесь, насколько полезной кажется вам наша система оценки новостроек:</h4>
-            <button class="about-feedback__btn green-btn">Удобно!</button>
-            <button class="about-feedback__btn orange-btn">Я знаю, как его улучшить</button>
-            <button class="about-feedback__btn grey-btn">Не нравится :-(</button>
+            <div class="about-feedback">
+              <h4 class="about-feedback__header">Поделитесь, насколько полезной кажется вам наша система оценки новостроек:</h4>
+              <button class="about-feedback__btn green-btn">Удобно!</button>
+              <button class="about-feedback__btn orange-btn">Я знаю, как его улучшить</button>
+              <button class="about-feedback__btn grey-btn">Не нравится :-(</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    </div>
 
     <!-- Project-blog section -->
 
@@ -199,9 +226,38 @@
                 </li>
               </ul>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </footer>
-    </body>
-    </html>
+    <script type="text/javascript">
+    var prevBtn = document.querySelector('.slider__prev-btn');
+    var nextBtn = document.querySelector('.slider__next-btn');
+    var slides = document.querySelectorAll('.slider-list__item');
+    var index = 0;
+    var count = slides.length;
+
+    nextBtn.addEventListener('click', function(){
+      slides[index].style.display = 'none';
+
+      index++;
+      if ( index > count - 1 ) {
+        index = 0;
+      }
+      slides[index].style.display = 'block';
+
+    })
+
+    prevBtn.addEventListener('click', function(){
+      slides[index].style.display = 'none';
+
+      index--;
+      if (index < 0 ) {
+        index = count - 1;
+      }
+      slides[index].style.display = 'block';
+    })
+
+    </script>
+  </body>
+  </html>

@@ -1,3 +1,27 @@
 .slider-list {
+  padding: 0;
   margin: 0;
+}
+.slider-list__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+.slider__next-btn,
+.slider__prev-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: red;
+  cursor: pointer;
+}
+.slider__next-btn {
+  top: 50%;
+  right: 0;
+}
+.slider__prev-btn {
+  top: 50%;
+  left: 0;
 }
