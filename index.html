@@ -81,10 +81,16 @@
 
       <div class="slider">
         <div class="slider__next-btn">
-
+          <svg class="right-arrow" width="50" height="50" aria-labelledby="right-arrow" role="presentation">
+            <title id="right-arrow">Right-arrow</title>
+            <use xlink:href="#right-arrow"></use>
+          </svg>
         </div>
         <div class="slider__prev-btn">
-
+          <svg class="left-arrow" width="50" height="50" aria-labelledby="left-arrow" role="presentation">
+            <title id="left-arrow">Right-arrow</title>
+            <use xlink:href="#left-arrow"></use>
+          </svg>
         </div>
         <ul class="slider-list">
           <li class="slider-list__item slider-list__item--active">
@@ -246,9 +252,9 @@
         <div class="container">
           <div class="feedback-wrapper">
             <p class="feedback-text">Подпишитесь на новости о проекте	и получите чек-лист самостоятельной	оценки новостроек</p>
-            <form class="feedback-form form" action="index.html" method="post">
-              <input type="text" name="" value="">
-              <button type="submit" name="button">Получить чек-лист</button>
+            <form class="feedback-form" action="index.html" method="post">
+              <input class="feedback-form__input" type="text" name="" value="" placeholder="Адрес почты">
+              <button class="feedback-form__btn" type="submit" name="button">Получить чек-лист</button>
             </form>
           </div>
         </div>
@@ -261,8 +267,8 @@
       <div class="container">
         <div class="page-footer-wrapper">
           <div class="logo-info">
-            <h1 class="logo-info__header">MonApart</h1>
-            <p class="logo-info__slogan">Квартира вашей мечты на первичном рынке</p>
+            <h1 class="logo-info__header logo-info__header--footer">MonApart</h1>
+            <p class="logo-info__slogan">Квартира вашей мечты<br> на первичном рынке</p>
           </div>
           <div class="page-footer__socials socials">
             <div class="mail">
@@ -273,19 +279,47 @@
               <p class="socials-link__text">Мы в социальных сетях:</p>
               <ul class="socials-link__list socials-list">
                 <li class="socials-list__item">
-                  <a href="#"></a>
+                  <a href="#">
+                    <svg class="vk-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                      <title id="vk-icon">VK</title>
+                      <use xlink:href="#vk-icon-ft"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="socials-list__item">
-                  <a href="#"></a>
+                  <a href="#">
+                    <svg class="fb-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                      <title id="vk-icon">FB</title>
+                      <use xlink:href="#fb-icon-ft"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="socials-list__item">
-                  <a href="#"></a>
+                  <a href="#">
+                    <svg class="inst-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                      <title id="vk-icon">Instagram</title>
+                      <use xlink:href="#inst-icon-ft"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="socials-list__item">
-                  <a href="#"></a>
+                  <a href="#">
+                    <svg class="youtube-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                      <title id="vk-icon">Youtube</title>
+                      <use xlink:href="#youtube-icon-ft"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <div class="container">
+          <div class="copyright-wrapper">
+            <p class="copyright__date">&copy; 2017 MyPlace</p>
+            <p class="copyright__cond">Условия обработки персональных данных</p>
           </div>
         </div>
       </div>

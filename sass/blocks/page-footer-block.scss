@@ -1,5 +1,47 @@
-.page-footer-wrapper{
+.page-footer-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+.mail__text {
+  @include raleway;
+  font-size: 14px;
+  color: $light-gray;
+}
+.mail__link {
+  @include raleway-bold;
+  font-size: 14px;
+  color: $link-green;
+}
+.socials-link__text {
+  @include raleway;
+  font-size: 14px;
+  color: $light-gray;
+}
+.socials-list {
+  @include padding-list;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.copyright {
+  background-color: $background-copyright;
+}
+.copyright__date {
+  @include raleway;
+  font-size: 14px;
+  color: $light-gray;
+  margin-right: 20px;
+}
+.copyright__cond {
+  @include raleway;
+  font-size: 14px;
+}
+.copyright-wrapper {
+  display: flex;
+  flex-direction: row;
 }

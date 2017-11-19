@@ -14,10 +14,14 @@
     font-family: 'Satisfy', 'Arial', sans-serif;
     color: #feffff;
     font-size: 25px;
+
+    &--footer {
+      color: $footer-gray;
+    }
 }
 .logo-info__slogan {
   font-family: "Raleway-Light", "Arial", sans-serif;
-  color: #96a2a7;
+  color: $light-gray;
   font-size: 14px;
   line-height: 18px;
 }

@@ -9,7 +9,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Raleway-Light';
   src: url('../fonts/RalewayLight/Raleway-Light.eot?#iefix') format('embedded-opentype'),
@@ -20,7 +19,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Roboto-Bold';
   src: url('../fonts/RobotoBold/RobotoBold.eot?#iefix') formt('embedded-opentype'),
@@ -30,17 +28,15 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Roboto-Regular';
   src: url('../fonts/RobotoRegular/RobotoRegular.eot?iefix') format('embedded-opentype'),
-       url('../fonts/RobotoRegular/RobotoRegular.ttf') form('truetype'),
-       url('../fonts/RobotoRegular/RobotoRegular.woff') form('woff');
+       url('../fonts/RobotoRegular/RobotoRegular.ttf') format('truetype'),
+       url('../fonts/RobotoRegular/RobotoRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Satisfy';
   src: url('../fonts/Satisfy/Satisfy.eot?iefix') format('embedded-opentype'),
@@ -50,11 +46,13 @@
   font-style: normal;
   font-display: swap;
 }
-
 * {
   box-sizing: border-box;
 }
-
+html {
+  background-image: url('../img/myplace__index.png');
+  background-repeat: no-repeat;
+}
 .container {
   width: 1170px;
   margin: 0 auto;
