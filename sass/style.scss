@@ -1,5 +1,7 @@
 @import "scaffolding";
 @import "normalize";
+@import "variables/variables";
+@import "mixins/fonts";
 @import "blocks/page-header-block";
 @import "blocks/page-content-block";
 @import "blocks/slider-block";
@@ -8,3 +10,5 @@
 @import "blocks/blog-block";
 @import "blocks/feedback-block";
 @import "blocks/page-footer-block";
+@import "blocks/progbar-block";
+@import "blocks/item-select-block";

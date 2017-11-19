@@ -1,4 +1,47 @@
-.about-wrapper{
+.about {
+  background-color: rgba(21, 29, 37, 0.5);
+}
+.about-wrapper {
   display: flex;
   flex-direction: row;
+}
+.about-description__header {
+  @include raleway-bold;
+  font-size: 40px;
+  font-weight: 700;
+  color: $basic-white;
+}
+.about-description__text {
+  @include raleway;
+  font-size: 20px;
+  color: $basic-white;
+}
+.about-feedback {
+  @include raleway;
+  font-size: 20px;
+  color: $basic-white;
+}
+.about-feedback__btn {
+  @include raleway-bold;
+  font-size: 14px;
+  color: $basic-white;
+  width: 215px;
+  height: 45px;
+  text-align: left;
+  border-radius: 21px;
+  padding-left: 17px;
+  outline: none;
+  border: none;
+
+    &--green {
+      background-color: $link-green;
+    }
+
+    &--orange {
+      background-color: $basic-orange;
+    }
+
+    &--gray {
+      background-color: $basic-gray;
+    }
 }

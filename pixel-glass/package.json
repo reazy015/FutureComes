@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "pixel-glass",
+        "scope": null,
+        "escapedName": "pixel-glass",
+        "name": "pixel-glass",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\User\\Documents\\MyProjects\\FutureComes"
+    ]
+  ],
+  "_from": "pixel-glass@latest",
+  "_id": "pixel-glass@1.0.13",
+  "_inCache": true,
+  "_location": "/pixel-glass",
+  "_nodeVersion": "5.7.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/pixel-glass-1.0.13.tgz_1486739758728_0.9436003649607301"
+  },
+  "_npmUser": {
+    "name": "yoksel",
+    "email": "yokayoka@yandex.ru"
+  },
+  "_npmVersion": "3.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "pixel-glass",
+    "scope": null,
+    "escapedName": "pixel-glass",
+    "name": "pixel-glass",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/pixel-glass/-/pixel-glass-1.0.13.tgz",
+  "_shasum": "c569764ecdd2a15da6dea98cf168ef0bf00736ab",
+  "_shrinkwrap": null,
+  "_spec": "pixel-glass",
+  "_where": "C:\\Users\\User\\Documents\\MyProjects\\FutureComes",
+  "author": {
+    "name": "yoksel"
+  },
+  "bugs": {
+    "url": "https://github.com/yoksel/pixel-glass-js/issues"
+  },
+  "dependencies": {},
+  "description": "Tiny JS library for visual checking markup",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "c569764ecdd2a15da6dea98cf168ef0bf00736ab",
+    "tarball": "https://registry.npmjs.org/pixel-glass/-/pixel-glass-1.0.13.tgz"
+  },
+  "gitHead": "e75a9cf5112a71df8998ca0274b1f86f05e4218d",
+  "homepage": "https://yoksel.github.io/pixel-glass-js/",
+  "license": "ISC",
+  "main": "script.js",
+  "maintainers": [
+    {
+      "name": "yoksel",
+      "email": "yokayoka@yandex.ru"
+    }
+  ],
+  "name": "pixel-glass",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoksel/pixel-glass-js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "styles.css",
+  "version": "1.0.13"
+}

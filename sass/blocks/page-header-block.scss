@@ -2,7 +2,6 @@
   position: absolute;
   width: 100%;
   padding-top: 40px;
-  outline: 1px solid green;
 }
 .page-header__wrapper {
   display: flex;
@@ -10,17 +9,31 @@
   justify-content: space-between;
 }
 .logo-info {
-  outline: 1px solid red;
 }
 .logo-info__header {
     font-family: 'Satisfy', 'Arial', sans-serif;
+    color: #feffff;
+    font-size: 25px;
+}
+.logo-info__slogan {
+  font-family: "Raleway-Light", "Arial", sans-serif;
+  color: #96a2a7;
+  font-size: 14px;
+  line-height: 18px;
 }
 .share-link {
   display: flex;
   flex-direction: row;
-  outline: 1px solid red;
+}
+.share-link__text {
+  @include raleway;
+  color: $light-gray;
+  font-size: 14px;
+  margin: 0;
+  margin-right: 20px;
 }
 .link-list {
+  @include padding-list;
   display: flex;
   flex-direction: row;
 }

@@ -1,0 +1,22 @@
+.item-select {
+  display: flex;
+  flex-direction: row;
+}
+.item-descr__slogan {
+  @include raleway-bold;
+  color: $basic-white;
+  background-color: $link-green;
+  margin: 0;
+  padding: 16px 0px 10px 14px;
+  position: relative;
+
+  &:after{
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: -42px;
+    border: 22px solid transparent;
+  	border-left: 20px solid $link-green;
+  }
+}
