@@ -7,7 +7,7 @@
 }
 .progbar-ready {
   position: relative;
-  width: 50%;
+  width: 47%;
   height: 4px;
   background-color: #10d078;
   opacity: 1;
@@ -17,17 +17,19 @@
     display: block;
     position: absolute;
     content: '';
-    right: 0;
+    right: -20px;
     top: 0;
-    border: 20px solid transparent;
-  	border-left: 20px solid #10d078;
-    border-top: 20px solid #10d078;
+    border: 10px solid transparent;
+  	border-left: 10px solid #10d078;
+    border-top: 10px solid #10d078;
   }
 }
 .progbar-text {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 10px;
+  margin: 0;
+  padding-top: 2px;
 
   font-family: "Raleway-Light", "Aria", sans-serif;
   color: #feffff;

@@ -1,25 +1,47 @@
 .about {
-  background-color: rgba(21, 29, 37, 0.5);
+  background-color: rgba(21, 29, 37, 0.8);
+  padding-top: 65px;
+  padding-bottom: 115px;
 }
 .about-wrapper {
   display: flex;
   flex-direction: row;
+  padding-right: 75px;
+}
+.about-description {
+  max-width: 71%;
 }
 .about-description__header {
   @include raleway-bold;
   font-size: 40px;
   font-weight: 700;
   color: $basic-white;
+  padding-left: 15px;
+  margin: 0;
+  margin-bottom: 30px;
+  max-width: 70%;
 }
 .about-description__text {
   @include raleway;
   font-size: 20px;
+  line-height: 28px;
   color: $basic-white;
+  margin: 0;
+  max-width: 87%;
+  padding-left: 13px;
 }
 .about-feedback {
   @include raleway;
+  font-weight: normal;
   font-size: 20px;
   color: $basic-white;
+  max-width: 29%;
+}
+.about-feedback__header {
+  margin: 0;
+  padding-top: 5px;
+  margin-bottom: 33px;
+  max-width: 100%;
 }
 .about-feedback__btn {
   @include raleway-bold;
@@ -32,6 +54,7 @@
   padding-left: 17px;
   outline: none;
   border: none;
+  margin-bottom: 12px;
 
     &--green {
       background-color: $link-green;

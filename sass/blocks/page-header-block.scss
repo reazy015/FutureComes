@@ -1,19 +1,22 @@
 .page-header{
   position: absolute;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 33px;
 }
 .page-header__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 15px;
 }
 .logo-info {
+  padding-top: 7px;
 }
 .logo-info__header {
     font-family: 'Satisfy', 'Arial', sans-serif;
     color: #feffff;
     font-size: 25px;
+    margin: 0;
 
     &--footer {
       color: $footer-gray;
@@ -24,20 +27,26 @@
   color: $light-gray;
   font-size: 14px;
   line-height: 18px;
+  margin: 0;
+  padding-top: 4px;
 }
 .share-link {
   display: flex;
   flex-direction: row;
+}
+.share-list--header {
+  margin-right: -20px;
 }
 .share-link__text {
   @include raleway;
   color: $light-gray;
   font-size: 14px;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .link-list {
   @include padding-list;
+  width: 190px;
   display: flex;
   flex-direction: row;
 }

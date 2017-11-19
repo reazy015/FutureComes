@@ -6,14 +6,16 @@
 .blog-wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding-top: 80px;
+  padding-bottom: 76px;
 }
 .blog-intro__link {
   @include raleway-bold;
   color: $basic-white;
   background-color: $link-green;
   margin: 0;
-  padding: 16px 0px 10px 14px;
+  padding: 16px 60px 10px 14px;
   position: relative;
   text-decoration: none;
 
@@ -27,6 +29,9 @@
     border-left: 20px solid $link-green;
   }
 }
+.blog-intro {
+  max-width: 50%;
+}
 .blog-intro__header {
   @include raleway-bold;
   font-size: 40px;
@@ -37,8 +42,12 @@
   font-size: 14px;
   color: $basic-gray;
 }
+.blog-description {
+  max-width: 50%;
+}
 .blog-description__paragraph {
   @include raleway;
   font-size: 14px;
+  line-height: 22px;
   color: $basic-white;
 }

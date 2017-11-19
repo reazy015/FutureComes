@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 .socials {
   display: flex;
@@ -30,6 +32,8 @@
 }
 .copyright {
   background-color: $background-copyright;
+  padding-top: 29px;
+  padding-bottom: 29px;
 }
 .copyright__date {
   @include raleway;

@@ -1,12 +1,12 @@
 .feedback {
   padding-top: 55px;
-  padding-bottom: 64px;
 }
 .feedback-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid $border-gray;
+  padding-bottom: 63px;
 }
 .feedback-text {
   @include raleway-bold;
@@ -16,19 +16,22 @@
 .feedback-form {
   display: flex;
   flex-direction: row;
-  max-width: 33%;
+  justify-content: flex-start;
 }
 .feedback-form__input {
+  width: 400px;
   height: 40px;
+  padding-left: 10px;
   border: 1px solid $border-gray;
 }
 .feedback-form__btn {
   @include raleway-bold;
   height: 40px;
+  width: 200px;
   color: $basic-white;
   background-color: $link-green;
   margin: 0;
-  padding: 16px 0px 10px 14px;
+  padding: 13px 0px 10px 14px;
   position: relative;
   text-decoration: none;
   border: none;
@@ -38,8 +41,8 @@
     position: absolute;
     content: '';
     top: 0;
-    right: -42px;
-    border: 22px solid transparent;
+    right: -40px;
+    border: 21px solid transparent;
     border-left: 20px solid $link-green;
   }
 }

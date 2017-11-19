@@ -1,26 +1,36 @@
 .item-info {
+  position: relative;
   display: flex;
   flex-direction: row;
-  padding-top: 250px;
-  opacity: 1;
-  transition: opacity ease-in 0.5s;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-right: 30px;
+  padding-left: 10px;
+  margin-bottom: 55px;
 }
 .item-info__image {
   position: absolute;
   z-index: -1;
   width: 100%;
 }
+.item-info__description {
+  padding-top: 210px;
+}
 .item-descr__header {
   @include raleway-bold;
   color: $basic-white;
   font-size: 40px;
   font-weight: bold;
+  margin: 0;
+  margin-top: 12px;
 }
 .item-descr__text {
   @include raleway;
   color: $basic-white;
   font-size: 20px;
   line-height: 24px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 .item-descr__link {
   @include raleway-bold;
@@ -28,5 +38,32 @@
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-
+}
+.item-descr__form select {
+  width: 100px;
+  height: 40px;
+  margin-right: 3px;
+}
+.info-share {
+  padding-top: 32px;
+}
+.info-share__text {
+  @include raleway;
+  color: $light-gray;
+  font-size: 14px;
+  margin: 0;
+  margin-right: 12px;
+}
+.share-list {
+  @include padding-list;
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.share-list__item--vk {
+  margin-right: 12px;
+}
+.share-list__item--fb {
+  padding-bottom: 10px;
 }
