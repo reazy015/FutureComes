@@ -4,7 +4,7 @@
 @import "mixins/fonts";
 @import "blocks/page-header-block";
 @import "blocks/page-content-block";
-@import "blocks/slider-block";
+// @import "blocks/slider-block";
 @import "blocks/item-info-block";
 @import "blocks/about-block";
 @import "blocks/blog-block";
@@ -14,3 +14,6 @@
 @import "blocks/item-select-block";
 @import "blocks/svg-helper-block";
 @import "blocks/svg-helper-block";
+@import "blocks/test-slider";
+@import "blocks/help-wrapper";
+@import "blocks/slider-controls-block";

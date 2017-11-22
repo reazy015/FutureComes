@@ -1,0 +1,22 @@
+.slider-controls {
+  position: absolute;
+  top: 33%;
+  left: 0;
+  right: 0;
+}
+.slider-controls__prev {
+  position: relative;
+  left: -70px;
+  cursor: pointer;
+  z-index: 2;
+}
+.slider-controls__next {
+  position: relative;
+  right: -50px;
+  cursor: pointer;
+  z-index: 2;
+}
+.slider-controls__prev:hover > .left-arrow,
+.slider-controls__next:hover > .right-arrow {
+  stroke: $link-green;
+}

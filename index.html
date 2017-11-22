@@ -9,6 +9,36 @@
   <link rel="preload" href="fonts/RobotoRegular/RobotoRegular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Satisfy/Satisfy.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- Pixel Glass -->
+  <style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "img/myplace_index.jpg" );
+    height: 100%;
+  }
+  /* Tablet */
+  @media ( min-width: 760px ) {
+    HTML {
+      /* Tablet layout */
+      background-image: url( "img/760.png" );
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 960px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/myplace_index.png" );
+    }
+  }
+  body {
+    height: 100%;
+  }
+</style>
+<link href="./pixel-glass/styles.css" rel="stylesheet">
+<script src="./pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 <body class="page">
   <include src="img/raiting-info.svg"></include>
@@ -24,8 +54,8 @@
         </div>
         <div class="page-header__share-link share-link">
           <p class="share-link__text">Расскажите о проекте друзьям:</p>
-          <ul class="share-link__list share-list share-list--header">
-            <li class="share-list__item share-list__item--vk">
+          <ul class="share-link__list soc-list-header soc-list-header__item">
+            <li class="soc-list-header__item share-list__item--vk">
               <a href="#">
                 <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="vk-icon">VK</title>
@@ -33,7 +63,7 @@
                 </svg>
               </a>
             </li>
-            <li class="share-list__item share-list__item--fb">
+            <li class="soc-list-header__item share-list__item--fb">
               <a href="#">
                 <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="fb-icon">FB</title>
@@ -41,7 +71,7 @@
                 </svg>
               </a>
             </li>
-            <li class="share-list__item share-list__item--tw">
+            <li class="soc-list-header__item share-list__item--tw">
               <a href="#">
                 <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="tw-icon">TW</title>
@@ -49,7 +79,7 @@
                 </svg>
               </a>
             </li>
-            <li class="share-list__item share-list__item--class">
+            <li class="soc-list-header__item share-list__item--class">
               <a href="#">
                 <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="class-icon">CLS</title>
@@ -57,7 +87,7 @@
                 </svg>
               </a>
             </li>
-            <li class="share-list__item share-list__item--t">
+            <li class="soc-list-header__item share-list__item--t">
               <a href="#">
                 <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="t-icon">T</title>
@@ -76,312 +106,319 @@
 
   <main class="page-content">
 
-    <div class="help-wrapper">
 
-      <!-- Slider-block -->
-      <div class="container">
-        <div class="slider__next-btn">
-          <svg class="right-arrow" width="50" height="50" aria-labelledby="right-arrow" role="presentation">
-            <title id="right-arrow">Right-arrow</title>
-            <use xlink:href="#right-arrow"></use>
-          </svg>
-        </div>
-        <div class="slider__prev-btn">
-          <svg class="left-arrow" width="50" height="50" aria-labelledby="left-arrow" role="presentation">
-            <title id="left-arrow">Right-arrow</title>
-            <use xlink:href="#left-arrow"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="slider">
 
-        <ul class="slider-list">
-          <li class="slider-list__item slider-list__item--active">
-            <div class="progbar-wrapper">
-              <div class="progbar-ready">
-                <p class="progbar-text">
-                  Готовность проекта: 45%
-                </p>
-              </div>
-            </div>
-            <picture>
-              <img class="item-info__image" src="img/slide-image1.png" alt="фото новостройки">
-            </picture>
-            <div class="container">
-              <div class="item-info">
-                <div class="item-info__description item-descr">
-                  <div class="item-select">
-                    <form class="item-descr__form" action="#" method="post">
-                      <select>
-                        <option value="1">19 февраля</option>
-                        <option value="2">26 февраля</option>
-                        <option value="3">2 марта</option>
-                        <option value="1">9 марта</option>
-                        <option value="2">16 марта</option>
-                        <option value="3">24 марта</option>
-                      </select>
-                    </form>
-                    <p class="item-descr__slogan">Новостройка недели</p>
-                  </div>
-                  <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
-                  <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
-                  <a class="item-descr__link"href="#">Узнать больше</a>
-                  <div class="share-link info-share">
-                    <p class="info-share__text">Поделиться новостройкой:</p>
-                    <ul class="share-link__list share-list">
-                      <li class="share-list__item share-list__item--vk">
-                        <a href="#">
-                          <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="vk-icon">VK</title>
-                            <use xlink:href="#vk-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--fb">
-                        <a href="#">
-                          <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="fb-icon">FB</title>
-                            <use xlink:href="#fb-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--tw">
-                        <a href="#">
-                          <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="tw-icon">TW</title>
-                            <use xlink:href="#tw-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--class">
-                        <a href="#">
-                          <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="class-icon">CLS</title>
-                            <use xlink:href="#class-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--t">
-                        <a href="#">
-                          <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="t-icon">T</title>
-                            <use xlink:href="#t-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
+    <!-- Slider-block -->
 
-                    </ul>
-                  </div>
-                </div>
 
-                <div class="item-info__graph">
-                  <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                    <title id="title-icon-house">Иконка дома</title>
-                    <use xlink:href="#raiting-info"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
+    <div class="slider slider-js">
 
-          <li class="slider-list__item">
-            <div class="progbar-wrapper">
-              <div class="progbar-ready">
-                <p class="progbar-text">
-                  Готовность проекта: 45%
-                </p>
-              </div>
-            </div>
-            <picture>
-              <img class="item-info__image" src="img/slide-image2.png" alt="фото новостройки">
-            </picture>
-            <div class="container">
-              <div class="item-info">
-                <div class="item-info__description item-descr">
-                  <div class="item-select">
-                    <form class="item-descr__form" action="#" method="post">
-                      <select>
-                        <option value="1">19 февраля</option>
-                        <option value="2">26 февраля</option>
-                        <option value="3">2 марта</option>
-                        <option value="1">9 марта</option>
-                        <option value="2">16 марта</option>
-                        <option value="3">24 марта</option>
-                      </select>
-                    </form>
-                    <p class="item-descr__slogan">Новостройка недели</p>
-                  </div>
-                  <h2 class="item-descr__header">ЖК «YOUПитер2»</h2>
-                  <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
-                  <a class="item-descr__link"href="#">Узнать больше</a>
-                  <div class="share-link info-share">
-                    <p class="info-share__text">Поделиться новостройкой:</p>
-                    <ul class="share-link__list share-list">
-                      <li class="share-list__item share-list__item--vk">
-                        <a href="#">
-                          <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="vk-icon">VK</title>
-                            <use xlink:href="#vk-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--fb">
-                        <a href="#">
-                          <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="fb-icon">FB</title>
-                            <use xlink:href="#fb-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--tw">
-                        <a href="#">
-                          <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="tw-icon">TW</title>
-                            <use xlink:href="#tw-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--class">
-                        <a href="#">
-                          <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="class-icon">CLS</title>
-                            <use xlink:href="#class-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--t">
-                        <a href="#">
-                          <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="t-icon">T</title>
-                            <use xlink:href="#t-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="item-info__graph">
-                  <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                    <title id="title-icon-house">Иконка дома</title>
-                    <use xlink:href="#raiting-info"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="slider-list__item">
-            <div class="progbar-wrapper">
-              <div class="progbar-ready">
-                <p class="progbar-text">
-                  Готовность проекта: 45%
-                </p>
-              </div>
-            </div>
-            <picture>
-              <img class="item-info__image" src="img/slide-image3.png" alt="фото новостройки">
-            </picture>
-            <div class="container">
-              <div class="item-info">
-                <div class="item-info__description item-descr">
-                  <div class="item-select">
-                    <form class="item-descr__form" action="#" method="post">
-                      <select>
-                        <option value="1">19 февраля</option>
-                        <option value="2">26 февраля</option>
-                        <option value="3">2 марта</option>
-                        <option value="1">9 марта</option>
-                        <option value="2">16 марта</option>
-                        <option value="3">24 марта</option>
-                      </select>
-                    </form>
-                    <p class="item-descr__slogan">Новостройка недели</p>
-                  </div>
-                  <h2 class="item-descr__header">ЖК «YOUПитер3»</h2>
-                  <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
-                  <a class="item-descr__link"href="#">Узнать больше</a>
-                  <div class="share-link info-share">
-                    <p class="info-share__text">Поделиться новостройкой:</p>
-                    <ul class="share-link__list share-list">
-                      <li class="share-list__item share-list__item--vk">
-                        <a href="#">
-                          <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="vk-icon">VK</title>
-                            <use xlink:href="#vk-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--fb">
-                        <a href="#">
-                          <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="fb-icon">FB</title>
-                            <use xlink:href="#fb-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--tw">
-                        <a href="#">
-                          <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="tw-icon">TW</title>
-                            <use xlink:href="#tw-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--class">
-                        <a href="#">
-                          <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="class-icon">CLS</title>
-                            <use xlink:href="#class-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="share-list__item share-list__item--t">
-                        <a href="#">
-                          <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                            <title id="t-icon">T</title>
-                            <use xlink:href="#t-icon"></use>
-                          </svg>
-                        </a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="item-info__graph">
-                  <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                    <title id="title-icon-house">Иконка дома</title>
-                    <use xlink:href="#raiting-info"></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- About project section -->
-
-      <section class="about">
-        <div class="container">
-          <div class="about-wrapper">
-            <div class="about-description">
-              <h3 class="about-description__header">Мы готовим крутой сервис по подбору квартиры<br>	в новостройке</h3>
-              <p class="about-description__text">MonApart подберёт подходящие жилые комплексы и покажет, чем они отличаются друг от друга.Если вы никак не решите, где лучше купить квартиру, в Девяткино или в Кудрово, то вам должно понравиться.</p>
-            </div>
-            <div class="about-feedback">
-              <h4 class="about-feedback__header">Поделитесь, насколько полезной кажется вам наша система оценки новостроек:</h4>
-              <button class="about-feedback__btn about-feedback__btn--green">Удобно!</button>
-              <button class="about-feedback__btn about-feedback__btn--orange">Я знаю, как его улучшить</button>
-              <button class="about-feedback__btn about-feedback__btn--gray">Не нравится :-(</button>
-            </div>
+      <div class="slider-controls">
+        <div class="container container--flex">
+          <div class="slider-controls__prev slider-controls__prev--pointer js-prev-btn">
+            <svg class="left-arrow" width="50" height="50" aria-labelledby="vk-icon" role="presentation">
+              <title id="fb-icon">right arrow</title>
+              <use xlink:href="#left-arrow"></use>
+            </svg>
+          </div>
+          <div class="slider-controls__next slider-controls__prev--pointer js-next-btn">
+            <svg class="right-arrow" width="50" height="50" aria-labelledby="vk-icon" role="presentation">
+              <title id="fb-icon">right arrow</title>
+              <use xlink:href="#right-arrow"></use>
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div class="slider-wrap slider-wrap-js">
+        <div class="slider-item">
+          <div class="progbar-wrapper">
+            <div class="progbar-ready">
+              <p class="progbar-text">
+                Готовность проекта: 45%
+              </p>
+            </div>
+          </div>
+
+          <picture>
+            <img class="slider-item__image" src="img/slide-image1.png" alt="Изображение слайда">
+          </picture>
+
+          <div class="container container--flex">
+            <div class="slider-item__info">
+              <div class="item-select">
+                <form class="item-descr__form" action="#" method="post">
+                  <select>
+                    <option value="1">19 февраля</option>
+                    <option value="2">26 февраля</option>
+                    <option value="3">2 марта</option>
+                    <option value="1">9 марта</option>
+                    <option value="2">16 марта</option>
+                    <option value="3">24 марта</option>
+                  </select>
+                </form>
+                <p class="item-descr__slogan">Новостройка недели</p>
+              </div>
+              <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
+              <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
+              <a class="item-descr__link"href="#">Узнать больше</a>
+              <div class="share-link info-share">
+                <p class="info-share__text">Поделиться новостройкой:</p>
+                <ul class="share-link__list share-list">
+                  <li class="share-list__item share-list__item--vk">
+                    <a href="#">
+                      <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="vk-icon">VK</title>
+                        <use xlink:href="#vk-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--fb">
+                    <a href="#">
+                      <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="fb-icon">FB</title>
+                        <use xlink:href="#fb-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--tw">
+                    <a href="#">
+                      <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="tw-icon">TW</title>
+                        <use xlink:href="#tw-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--class">
+                    <a href="#">
+                      <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="class-icon">CLS</title>
+                        <use xlink:href="#class-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--t">
+                    <a href="#">
+                      <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="t-icon">T</title>
+                        <use xlink:href="#t-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="slider-item__graph">
+              <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
+                <title id="title-icon-house">Иконка дома</title>
+                <use xlink:href="#raiting-info"></use>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="progbar-wrapper">
+            <div class="progbar-ready">
+              <p class="progbar-text">
+                Готовность проекта: 45%
+              </p>
+            </div>
+          </div>
+
+          <picture>
+            <img class="slider-item__image" src="img/slide-image1.png" alt="Изображение слайда">
+          </picture>
+
+          <div class="container container--flex">
+            <div class="slider-item__info">
+              <div class="item-select">
+                <form class="item-descr__form" action="#" method="post">
+                  <select>
+                    <option value="1">19 февраля</option>
+                    <option value="2">26 февраля</option>
+                    <option value="3">2 марта</option>
+                    <option value="1">9 марта</option>
+                    <option value="2">16 марта</option>
+                    <option value="3">24 марта</option>
+                  </select>
+                </form>
+                <p class="item-descr__slogan">Новостройка недели</p>
+              </div>
+              <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
+              <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
+              <a class="item-descr__link"href="#">Узнать больше</a>
+              <div class="share-link info-share">
+                <p class="info-share__text">Поделиться новостройкой:</p>
+                <ul class="share-link__list share-list">
+                  <li class="share-list__item share-list__item--vk">
+                    <a href="#">
+                      <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="vk-icon">VK</title>
+                        <use xlink:href="#vk-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--fb">
+                    <a href="#">
+                      <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="fb-icon">FB</title>
+                        <use xlink:href="#fb-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--tw">
+                    <a href="#">
+                      <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="tw-icon">TW</title>
+                        <use xlink:href="#tw-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--class">
+                    <a href="#">
+                      <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="class-icon">CLS</title>
+                        <use xlink:href="#class-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--t">
+                    <a href="#">
+                      <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="t-icon">T</title>
+                        <use xlink:href="#t-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="slider-item__graph">
+              <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
+                <title id="title-icon-house">Иконка дома</title>
+                <use xlink:href="#raiting-info"></use>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="progbar-wrapper">
+            <div class="progbar-ready">
+              <p class="progbar-text">
+                Готовность проекта: 45%
+              </p>
+            </div>
+          </div>
+
+          <picture>
+            <img class="slider-item__image" src="img/slide-image1.png" alt="Изображение слайда">
+          </picture>
+
+          <div class="container container--flex">
+            <div class="slider-item__info">
+              <div class="item-select">
+                <form class="item-descr__form" action="#" method="post">
+                  <select>
+                    <option value="1">19 февраля</option>
+                    <option value="2">26 февраля</option>
+                    <option value="3">2 марта</option>
+                    <option value="1">9 марта</option>
+                    <option value="2">16 марта</option>
+                    <option value="3">24 марта</option>
+                  </select>
+                </form>
+                <p class="item-descr__slogan">Новостройка недели</p>
+              </div>
+              <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
+              <p class="item-descr__text">Номинация: «Самые высокие<br> потолки в Девяткино»</p>
+              <a class="item-descr__link"href="#">Узнать больше</a>
+              <div class="share-link info-share">
+                <p class="info-share__text">Поделиться новостройкой:</p>
+                <ul class="share-link__list share-list">
+                  <li class="share-list__item share-list__item--vk">
+                    <a href="#">
+                      <svg class="vk-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="vk-icon">VK</title>
+                        <use xlink:href="#vk-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--fb">
+                    <a href="#">
+                      <svg class="fb-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="fb-icon">FB</title>
+                        <use xlink:href="#fb-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--tw">
+                    <a href="#">
+                      <svg class="tw-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="tw-icon">TW</title>
+                        <use xlink:href="#tw-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--class">
+                    <a href="#">
+                      <svg class="class-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="class-icon">CLS</title>
+                        <use xlink:href="#class-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="share-list__item share-list__item--t">
+                    <a href="#">
+                      <svg class="t-icon" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                        <title id="t-icon">T</title>
+                        <use xlink:href="#t-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="slider-item__graph">
+              <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
+                <title id="title-icon-house">Иконка дома</title>
+                <use xlink:href="#raiting-info"></use>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     </div>
+
+    <!-- About project section -->
+
+    <section class="about">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-description">
+            <h3 class="about-description__header">Мы готовим крутой сервис по подбору квартиры<br>	в новостройке</h3>
+            <p class="about-description__text">MonApart подберёт подходящие жилые комплексы и покажет, чем они отличаются друг от друга.Если вы никак не решите, где лучше купить квартиру, в Девяткино или в Кудрово, то вам должно понравиться.</p>
+          </div>
+          <div class="about-feedback">
+            <h4 class="about-feedback__header">Поделитесь, насколько полезной кажется вам наша система оценки новостроек:</h4>
+            <button class="about-feedback__btn about-feedback__btn--green">Удобно!</button>
+            <button class="about-feedback__btn about-feedback__btn--orange">Я знаю, как его улучшить</button>
+            <button class="about-feedback__btn about-feedback__btn--gray">Не нравится :-(</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Project-blog section -->
 
@@ -405,110 +442,175 @@
 
       <!-- Feedback section -->
 
-      <section class="feedback">
-        <div class="container">
-          <div class="feedback-wrapper">
-            <p class="feedback-text">Подпишитесь на новости о проекте	и получите чек-лист самостоятельной	оценки новостроек</p>
-            <form class="feedback-form" action="index.html" method="post">
-              <input class="feedback-form__input" type="text" name="" value="" placeholder="Адрес почты">
-              <button class="feedback-form__btn" type="submit" name="button">Получить чек-лист!</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Page-footer -->
-
-    <footer class="page-footer">
+      <!-- <section class="feedback">
       <div class="container">
-        <div class="page-footer-wrapper">
-          <div class="logo-info">
-            <h1 class="logo-info__header logo-info__header--footer">MyPlace</h1>
-            <p class="logo-info__slogan">Квартира вашей мечты<br> на первичном рынке</p>
-          </div>
-          <div class="page-footer__socials socials">
-            <div class="mail">
-              <p class="mail__text">Пишите нам:</p>
-              <a class="mail__link" href="#">hello@myplace.ru</a>
-            </div>
-            <div class="socials-link">
-              <p class="socials-link__text">Мы в социальных сетях:</p>
-              <ul class="socials-link__list socials-list">
-                <li class="socials-list__item">
-                  <a href="#">
-                    <svg class="vk-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                      <title id="vk-icon">VK</title>
-                      <use xlink:href="#vk-icon-ft"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-list__item">
-                  <a href="#">
-                    <svg class="fb-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                      <title id="vk-icon">FB</title>
-                      <use xlink:href="#fb-icon-ft"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-list__item">
-                  <a href="#">
-                    <svg class="inst-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                      <title id="vk-icon">Instagram</title>
-                      <use xlink:href="#inst-icon-ft"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials-list__item">
-                  <a href="#">
-                    <svg class="youtube-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
-                      <title id="vk-icon">Youtube</title>
-                      <use xlink:href="#youtube-icon-ft"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="feedback-wrapper">
+      <p class="feedback-text">Подпишитесь на новости о проекте	и получите чек-лист самостоятельной	оценки новостроек</p>
+      <form class="feedback-form" action="index.html" method="post">
+      <input class="feedback-form__input" type="text" name="" value="" placeholder="Адрес почты">
+      <button class="feedback-form__btn" type="submit" name="button">Получить чек-лист!</button>
+    </form>
+  </div>
+</div>
+</section> -->
+</main>
+
+<!-- Page-footer -->
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="page-footer-wrapper">
+      <div class="logo-info">
+        <h1 class="logo-info__header logo-info__header--footer">MyPlace</h1>
+        <p class="logo-info__slogan">Квартира вашей мечты<br> на первичном рынке</p>
+      </div>
+      <div class="page-footer__socials socials">
+        <div class="mail">
+          <p class="mail__text">Пишите нам:</p>
+          <a class="mail__link" href="#">hello@myplace.ru</a>
+        </div>
+        <div class="socials-link">
+          <p class="socials-link__text">Мы в социальных сетях:</p>
+          <ul class="socials-link__list socials-list">
+            <li class="socials-list__item">
+              <a href="#">
+                <svg class="vk-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                  <title id="vk-icon">VK</title>
+                  <use xlink:href="#vk-icon-ft"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#">
+                <svg class="fb-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                  <title id="vk-icon">FB</title>
+                  <use xlink:href="#fb-icon-ft"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#">
+                <svg class="inst-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                  <title id="vk-icon">Instagram</title>
+                  <use xlink:href="#inst-icon-ft"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="#">
+                <svg class="youtube-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                  <title id="vk-icon">Youtube</title>
+                  <use xlink:href="#youtube-icon-ft"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="page-footer__copyright copyright">
-        <div class="container">
-          <div class="copyright-wrapper">
-            <p class="copyright__date">&copy; 2017 MyPlace</p>
-            <p class="copyright__cond">Условия обработки персональных данных</p>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="page-footer__copyright copyright">
+    <div class="container">
+      <div class="copyright-wrapper">
+        <p class="copyright__date">&copy; 2017 MyPlace</p>
+        <p class="copyright__cond">Условия обработки персональных данных</p>
       </div>
-    </footer>
-    <script type="text/javascript">
-    var prevBtn = document.querySelector('.slider__prev-btn');
-    var nextBtn = document.querySelector('.slider__next-btn');
-    var slides = document.querySelectorAll('.slider-list__item');
-    var index = 0;
-    var count = slides.length;
+    </div>
+  </div>
+</footer>
+<!-- <script type="text/javascript">
+(function() {
+"use strict";
 
-    nextBtn.addEventListener('click', function(){
-      slides[index].style.display = 'none';
+function Carousel(setting) {
+if(document.querySelector(setting.wrap) === null) {
+console.error(`Carousel not fount selector ${setting.wrap}`);
+return;
+}
 
-      index++;
-      if ( index > count - 1 ) {
-        index = 0;
-      }
-      slides[index].style.display = 'block';
+/* Scope privates methods and properties */
+let privates = {};
 
-    })
 
-    prevBtn.addEventListener('click', function(){
-      slides[index].style.display = 'none';
+/* Public methods */
+// Prev slide
+this.prev_slide = () => {
+--privates.opt.position;
 
-      index--;
-      if (index < 0 ) {
-        index = count - 1;
-      }
-      slides[index].style.display = 'block';
-    })
+if(privates.opt.position < 0) {
+privates.sel.wrap.classList.add('s-notransition');
+privates.opt.position = privates.opt.max_position - 1;
+}
 
-    </script>
-  </body>
-  </html>
+privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
+};
+
+
+// Next slide
+this.next_slide = () => {
+++privates.opt.position;
+
+if(privates.opt.position >= privates.opt.max_position) {
+privates.opt.position = 0;
+}
+
+privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
+};
+
+
+
+/* Privates properties */
+privates.setting = setting;
+
+privates.sel = {
+"main": document.querySelector(privates.setting.main),
+"wrap": document.querySelector(privates.setting.wrap),
+"children": document.querySelector(privates.setting.wrap).children,
+"prev": document.querySelector(privates.setting.prev),
+"next": document.querySelector(privates.setting.next)
+};
+
+privates.opt = {
+"position": 0,
+"max_position": document.querySelector(privates.setting.wrap).children.length
+};
+
+// Control
+if(privates.sel.prev !== null) {
+privates.sel.prev.addEventListener('click', () => {
+this.prev_slide();
+});
+}
+
+if(privates.sel.next !== null) {
+privates.sel.next.addEventListener('click', () => {
+this.next_slide();
+});
+}
+
+}
+
+
+let a = new Carousel({
+"main": ".slider-js",
+"wrap": ".slider-wrap-js",
+"prev": ".js-prev-btn",
+"next": ".js-next-btn"
+});
+
+})();
+</script> -->
+<script type="text/javascript">
+const nextBtn = document.querySelector('.js-next-btn');
+const prevBtn = document.querySelector('.js-prev-btn');
+const sliderWrap = document.querySelector('.slider-wrap-js');
+
+nextBtn.addEventListener('click', function(){
+  sliderWrap.style.transform = `translateX(-100%)`;
+});
+prevBtn.addEventListener('click', function(){
+  sliderWrap.style.transform = `translateX(0%)`;
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slider-item {
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-top: 115px;
+  padding-right: 60px;
+}
+.slider-item__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+.slider-item__info {
+  padding-top: 217px;
+  padding-left: 41px;
+}
+.slider-wrap {
+  display: flex;
+  transition: transform .5s;
+}

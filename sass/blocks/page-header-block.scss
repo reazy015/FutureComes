@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   padding-top: 33px;
+  z-index: 3;
 }
 .page-header__wrapper {
   display: flex;
@@ -10,6 +11,7 @@
   padding-left: 15px;
 }
 .logo-info {
+  flex: 1 1 auto;
   padding-top: 7px;
 }
 .logo-info__header {
@@ -31,22 +33,30 @@
   padding-top: 4px;
 }
 .share-link {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: row;
-}
-.share-list--header {
-  margin-right: -20px;
+  justify-content: flex-end;
 }
 .share-link__text {
   @include raleway;
   color: $light-gray;
   font-size: 14px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.link-list {
+.soc-list-header {
   @include padding-list;
-  width: 190px;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-right: 15px;
+}
+.soc-list-header__item {
+  margin-right: 5px;
+
+  &:nth-of-type(4) {
+    margin-right: 8px;
+  }
 }

@@ -49,11 +49,17 @@
 * {
   box-sizing: border-box;
 }
-html {
-  background-image: url('../img/myplace__index.png');
-  background-repeat: no-repeat;
-}
 .container {
-  max-width: 1170px;
+  width: 1170px;
   margin: 0 auto;
+
+  &--flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &--flex-rel {
+    position: relative;
+  }
 }
