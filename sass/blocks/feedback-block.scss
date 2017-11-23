@@ -1,48 +1,57 @@
 .feedback {
-  padding-top: 55px;
+  padding-top: 50px;
+  padding-left: 30px;
 }
 .feedback-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid $border-gray;
-  padding-bottom: 63px;
+  padding-bottom: 59px;
 }
 .feedback-text {
   @include raleway-bold;
   font-size: 20px;
-  max-width: 33%;
+  line-height: 1.2;
+  flex: 1 1 20%;
+  margin: 0;
 }
 .feedback-form {
+  flex: 1 1 50%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding-top: 15px;
+  padding-left: 46px;
 }
 .feedback-form__input {
-  width: 400px;
+  width: 410px;
   height: 40px;
-  padding-left: 10px;
+  padding-left: 15px;
   border: 1px solid $border-gray;
+  font-size: 20px;
 }
 .feedback-form__btn {
   @include raleway-bold;
-  height: 40px;
-  width: 200px;
+  font-size: 20px;
+  height: 41px;
+  width: 221px;
   color: $basic-white;
   background-color: $link-green;
   margin: 0;
-  padding: 13px 0px 10px 14px;
+  padding: 7px 0px 10px 14px;
   position: relative;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 
   &:after{
     display: block;
     position: absolute;
     content: '';
     top: 0;
-    right: -40px;
+    right: -36px;
     border: 21px solid transparent;
-    border-left: 20px solid $link-green;
+    border-left: 15px solid $link-green;
   }
 }

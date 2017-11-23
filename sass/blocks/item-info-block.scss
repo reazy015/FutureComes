@@ -38,6 +38,10 @@
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
+
+  &:hover {
+    color: green;
+  }
 }
 .item-descr__form select {
   width: 100px;

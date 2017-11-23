@@ -10,7 +10,7 @@
 
   padding-left: 10px;
   padding-top: 68px;
-  padding-bottom: 72px;
+  padding-bottom: 50px;
 }
 .blog-intro__link {
   @include raleway-bold;
@@ -60,4 +60,5 @@
   font-size: 14px;
   line-height: 22px;
   color: $basic-white;
+  width: 87%;
 }

@@ -5,3 +5,52 @@
   stroke-width: 1px;
   fill-rule: evenodd;
 }
+.chart__segment {
+  cursor: pointer;
+  transition: all 0.1s;
+}
+#green {
+  color: $green;
+
+  &:hover {
+    fill: darken($green, 8%);
+  }
+}
+#orange {
+  color: $orange;
+
+  &:hover {
+    fill: darken($orange, 15%);
+  }
+}
+#red {
+  color: $red;
+
+  &:hover {
+    fill: darken($red, 8%);
+  }
+}
+#total-raiting {
+  fill: darken($green, 15%);
+}
+.engineering:hover ~ #engineering,
+.courtyard:hover ~ #courtyard,
+.security:hover ~ #security,
+.parking:hover ~ #parking,
+.technology:hover ~ #technology,
+.district:hover ~ #district,
+.status:hover ~ #status,
+.auto:hover ~ #auto,
+.gr-transportation:hover ~ #gr-transportation,
+.metro:hover ~ #metro,
+.entertainment:hover ~ #entertainment,
+.medicine:hover ~ #medicine,
+.trading:hover ~ #trading,
+.area:hover ~ #area,
+.location:hover ~ #location,
+.pop-density:hover ~ #pop-density,
+.density-on-the-floor:hover ~ #density-on-the-floor,
+.planings:hover ~ #planings,
+.ceilings:hover ~ #ceilings {
+  fill: white;
+}

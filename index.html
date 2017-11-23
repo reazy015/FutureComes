@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>FutureComes</title>
-  <link rel="preload" href="fonts/RalewayBold/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/RalewayLight/Raleway-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Raleway-Bold/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Raleway-Light/Raleway-Ligt.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/RobotoBold/RobotoBold.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/RobotoRegular/RobotoRegular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Satisfy/Satisfy.woff" as="font" type="font/woff" crossorigin>
@@ -15,25 +15,7 @@
     background-repeat: no-repeat;
     background-position:  50% 0;
     /* Mobile layout by default */
-    background-image: url( "img/myplace_index.jpg" );
-    height: 100%;
-  }
-  /* Tablet */
-  @media ( min-width: 760px ) {
-    HTML {
-      /* Tablet layout */
-      background-image: url( "img/760.png" );
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 960px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "img/myplace_index.png" );
-    }
-  }
-  body {
-    height: 100%;
+    background-image: url( "img/myplace_index.png" );
   }
 </style>
 <link href="/pixel-glass/styles.css" rel="stylesheet">
@@ -106,11 +88,9 @@
 
   <main class="page-content">
 
-
-
     <!-- Slider-block -->
 
-      <div class="slider slider-js">
+    <div class="slider slider-js">
 
         <div class="slider-controls">
           <div class="container container--flex">
@@ -148,16 +128,16 @@
             <div class="container container--flex">
               <div class="slider-item__info">
                 <div class="item-select">
-                  <form class="item-descr__form" action="#" method="post">
-                    <select>
-                      <option value="1">19 февраля</option>
-                      <option value="2">26 февраля</option>
-                      <option value="3">2 марта</option>
-                      <option value="1">9 марта</option>
-                      <option value="2">16 марта</option>
-                      <option value="3">24 марта</option>
-                    </select>
-                  </form>
+                  <div class="item-select__popup popup">
+                    <div class="popup__current popup-open-btn popup__current--close">19.02</div>
+                    <ul class="popup__list date-list popup-list">
+                      <li class="date-list__item">19 февраля</li>
+                      <li class="date-list__item">26 февраля</li>
+                      <li class="date-list__item">9 марта</li>
+                      <li class="date-list__item">16 марта</li>
+                      <li class="date-list__item">24 марта</li>
+                    </ul>
+                  </div>
                   <p class="item-descr__slogan">Новостройка недели</p>
                 </div>
                 <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
@@ -212,10 +192,60 @@
               </div>
 
               <div class="slider-item__graph">
-                <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                  <title id="title-icon-house">Иконка дома</title>
-                  <use xlink:href="#raiting-info"></use>
-                </svg>
+                <svg id="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  							    width="605px" height="605px" viewBox="0 0 420.3 420.3" enable-background="new 0 0 420.3 420.3" xml:space="preserve">
+  							   <path opacity="0.3" d="M211.5,161.2V0c115,0.7,208.1,93.8,208.8,208.8H259.5C258.6,182.8,237.6,161.8,211.5,161.2z M208.8,161.2V0
+  							      C93.8,0.7,0.7,93.8,0,208.8h160.9C161.8,182.8,182.8,161.9,208.8,161.2z M160.9,211.5H0c0.7,115,93.8,208.1,208.8,208.8V259.9
+  							      C182.5,259.2,161.4,237.9,160.9,211.5z M211.5,259.9v160.4c115-0.7,208.1-93.8,208.8-208.8H259.5C259,237.9,237.8,259.2,211.5,259.9
+  							      z"/>
+  							   <g>
+  							      <path id="green" class="chart__segment engineering" fill="#63BF76" d="M287.8,131.8c-3.7-3.6-7.7-7-11.9-10.1l-36,49.7c1.7,1.3,3.3,2.6,4.8,4.1L287.8,131.8z"/>
+  							      <path id="green" class="chart__segment courtyard" class="chart__segment" fill="#63BF76" d="M298.8,144.4c-3.1-4.2-6.5-8.1-10.2-11.8l-43.1,43.7c1.4,1.5,2.8,3,4,4.7L298.8,144.4z"/>
+  							      <path id="green" class="chart__segment security" fill="#63BF76" d="M250.2,181.8c1.3,1.9,2.6,3.8,3.6,5.9l54.8-27.6c-2.7-5.2-5.7-10.1-9.1-14.8L250.2,181.8z"/>
+  							      <path id="green" class="chart__segment technology" fill="#63BF76" d="M315.6,176.9l-58.5,18.5c0.6,1.9,1.1,3.9,1.5,5.9l60.6-9.7C318.3,186.5,317.1,181.6,315.6,176.9z"/>
+  							      <path id="orange" class="chart__segment parking" fill="#F1B43D" d="M256.7,194.3l58.5-18.5c-1.7-5.1-3.7-10-6.1-14.7l-54.8,27.6C255.3,190.5,256,192.4,256.7,194.3z"/>
+  							      <path id="orange" class="chart__segment planings" fill="#F1B43D" d="M226.8,164.3c1.9,0.7,3.8,1.5,5.6,2.4l27.6-54.8c-4.6-2.3-9.5-4.4-14.4-6.1L226.8,164.3z"/>
+  							      <path id="orange" class="chart__segment status " fill="#F1B43D" d="M259.5,208.8h61.4c-0.1-5.5-0.6-10.9-1.5-16.2l-60.6,9.7C259.2,204.5,259.4,206.6,259.5,208.8z"/>
+  							      <path id="green-btn" class="chart__segment density-on-the-floor" fill="#63BF76" d="M219.6,162.3c2.1,0.4,4.1,0.9,6.1,1.6l18.8-58.4c-5-1.6-10.2-2.9-15.5-3.8L219.6,162.3z"/>
+  							      <path id="red" class="chart__segment ceilings" fill="#E12742" d="M275,121c-4.4-3.2-9.1-6.1-13.9-8.6l-27.6,54.8c1.9,1,3.8,2.2,5.6,3.5L275,121z"/>
+  							      <path id="orange" class="chart__segment medicine" fill="#F1B43D" d="M184.8,253c-7.1-4.3-13.1-10.3-17.3-17.5L115,267c9.5,16.1,23,29.5,39.1,39L184.8,253z"/>
+  							      <path id="orange" class="chart__segment pop-density" fill="#F1B43D" d="M228,101.4c-5.4-0.9-10.9-1.3-16.4-1.4v61.3c2.4,0.1,4.7,0.3,7,0.7L228,101.4z"/>
+  							      <path id="green" class="chart__segment district" fill="#63BF76" d="M185.6,167.9c6.9-3.9,14.7-6.3,23.2-6.5V100c-19.3,0.2-37.5,5.4-53.2,14.4L185.6,167.9z"/>
+  							      <path id="green" class="chart__segment gr-transportation" fill="#63BF76" d="M252.8,235.5c-4.2,7.1-10.1,13.1-17.2,17.4l30.6,53.2c16.4-9.7,30.1-23.4,39.7-39.9L252.8,235.5z"/>
+  							      <path id="green" class="chart__segment auto" fill="#63BF76" d="M253.4,234.5l53.1,30.7c9-15.9,14.2-34.2,14.4-53.8h-61.3C259.4,219.9,257.2,227.7,253.4,234.5z"/>
+  							      <path id="orange"class="chart__segment metro" fill="#F1B43D" d="M234.7,253.5c-6.9,3.9-14.7,6.3-23.2,6.5v61.3c19.5-0.2,37.9-5.5,53.7-14.6L234.7,253.5z"/>
+  							      <path id="green" class="chart__segment area" fill="#63BF76" d="M167.3,186.3L114.6,155c-9.3,15.9-14.7,34.2-15,53.8h61.4C161.2,200.6,163.5,193,167.3,186.3z"/>
+  							      <path id="green" class="chart__segment entertainment" fill="#63BF76" d="M155,306.6c15.9,9.1,34.2,14.5,53.8,14.7V260c-8.4-0.2-16.2-2.5-23-6.4L155,306.6z"/>
+  							      <path id="orange" class="chart__segment location" fill="#F1B43D" d="M167.9,185.3c4.1-6.9,9.9-12.7,16.8-16.8L154.6,115c-16.2,9.4-29.8,22.9-39.4,39L167.9,185.3z"/>
+  							      <path id="green" class="chart__segment trading" fill="#63BF76" d="M167,234.5c-3.8-6.8-6-14.6-6.1-23H99.5c0.1,19.9,5.5,38.5,14.8,54.6L167,234.5z"/>
+  							      <text id="engineering" transform="matrix(1 0 0 1 302.5096 132.433)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Инженерия</text>
+  							      <text id="courtyard" transform="matrix(1 0 0 1 312.8096 144.7329)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Двор</text>
+  							      <text id="security" transform="matrix(1 0 0 1 322.8097 159.1768)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Безопасность</text>
+  							      <text id="parking" transform="matrix(1 0 0 1 328.0096 172.9129)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Парковка</text>
+  							      <text id="technology" transform="matrix(1 0 0 1 332.0096 186.5204)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Технология</text>
+  							      <text id="status" transform="matrix(1 0 0 1 336.0096 200.7078)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Статус</text>
+  							      <text id="auto" transform="matrix(1 0 0 1 332.0096 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Автомобиль</text>
+  							      <text id="gr-transportation" transform="matrix(1 0 0 1 293.0096 301.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Наземный транспорт</text>
+  							      <text id="metro" transform="matrix(1 0 0 1 235.6353 335.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Метро</text>
+  							      <text id="entertainment" transform="matrix(1 0 0 1 120.5096 335.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Развлечения</text>
+  							      <text id="medicine" transform="matrix(1 0 0 1 72.8096 301.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Медицина</text>
+  							      <text id="trading" transform="matrix(1 0 0 1 47.9097 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Торговля</text>
+  							      <text id="area" transform="matrix(1 0 0 1 52.5096 176.8618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Участок</text>
+  							      <text id="location" transform="matrix(1 0 0 1 81.5096 121.6568)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Локация</text>
+  							      <text id="district" transform="matrix(1 0 0 1 145.0096 92.6496)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Район</text>
+  							      <text id="pop-density" transform="matrix(1 0 0 1 224.2491 83.7261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Плотность заселения</text>
+  							      <text id="density-on-the-floor" transform="matrix(1 0 0 1 250.196 95.9261)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Плотность на этаже</text>
+  							      <text id="planings" transform="matrix(1 0 0 1 272.1563 107.6261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Планировки</text>
+  							      <text id="ceilings" transform="matrix(1 0 0 1 289.8222 120.3845)" fill="#E12742" font-family="Raleway-Light" font-size="10">Потолки</text>
+  							   </g>
+  							   <circle id="total-raiting" cx="210.3" cy="210.6" r="46.3"/>
+  							   <text transform="matrix(1 0 0 1 239.9404 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Комфорт</text>
+  							   <text transform="matrix(1 0 0 1 112.956 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Экология</text>
+  							   <text transform="matrix(1 0 0 1 85.456 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Инфраструктура</text>
+  							   <text transform="matrix(1 0 0 1 238.3602 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Транспорт</text>
+  							   <text transform="matrix(1 0 0 1 175.7646 199.2046)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="9.0288">Общий рейтинг</text>
+  							   <text transform="matrix(1 0 0 1 181.9622 227.2689)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="28.4008">88%</text>
+                <svg>
               </div>
             </div>
 
@@ -238,16 +268,16 @@
             <div class="container container--flex">
               <div class="slider-item__info">
                 <div class="item-select">
-                  <form class="item-descr__form" action="#" method="post">
-                    <select>
-                      <option value="1">19 февраля</option>
-                      <option value="2">26 февраля</option>
-                      <option value="3">2 марта</option>
-                      <option value="1">9 марта</option>
-                      <option value="2">16 марта</option>
-                      <option value="3">24 марта</option>
-                    </select>
-                  </form>
+                  <div class="item-select__popup popup">
+                    <div class="popup__current popup-open-btn popup__current--close">19.02</div>
+                    <ul class="popup__list date-list popup-list">
+                      <li class="date-list__item">19 февраля</li>
+                      <li class="date-list__item">26 февраля</li>
+                      <li class="date-list__item">9 марта</li>
+                      <li class="date-list__item">16 марта</li>
+                      <li class="date-list__item">24 марта</li>
+                    </ul>
+                  </div>
                   <p class="item-descr__slogan">Новостройка недели</p>
                 </div>
                 <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
@@ -302,11 +332,60 @@
               </div>
 
               <div class="slider-item__graph">
-                <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                  <title id="title-icon-house">Иконка дома</title>
-                  <use xlink:href="#raiting-info"></use>
-                </svg>
-              </div>
+                <svg id="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  							    width="605px" height="605px" viewBox="0 0 420.3 420.3" enable-background="new 0 0 420.3 420.3" xml:space="preserve">
+  							   <path opacity="0.3" d="M211.5,161.2V0c115,0.7,208.1,93.8,208.8,208.8H259.5C258.6,182.8,237.6,161.8,211.5,161.2z M208.8,161.2V0
+  							      C93.8,0.7,0.7,93.8,0,208.8h160.9C161.8,182.8,182.8,161.9,208.8,161.2z M160.9,211.5H0c0.7,115,93.8,208.1,208.8,208.8V259.9
+  							      C182.5,259.2,161.4,237.9,160.9,211.5z M211.5,259.9v160.4c115-0.7,208.1-93.8,208.8-208.8H259.5C259,237.9,237.8,259.2,211.5,259.9
+  							      z"/>
+  							   <g>
+  							      <path id="green" class="chart__segment engineering" fill="#63BF76" d="M287.8,131.8c-3.7-3.6-7.7-7-11.9-10.1l-36,49.7c1.7,1.3,3.3,2.6,4.8,4.1L287.8,131.8z"/>
+  							      <path id="green" class="chart__segment courtyard" class="chart__segment" fill="#63BF76" d="M298.8,144.4c-3.1-4.2-6.5-8.1-10.2-11.8l-43.1,43.7c1.4,1.5,2.8,3,4,4.7L298.8,144.4z"/>
+  							      <path id="green" class="chart__segment security" fill="#63BF76" d="M250.2,181.8c1.3,1.9,2.6,3.8,3.6,5.9l54.8-27.6c-2.7-5.2-5.7-10.1-9.1-14.8L250.2,181.8z"/>
+  							      <path id="green" class="chart__segment technology" fill="#63BF76" d="M315.6,176.9l-58.5,18.5c0.6,1.9,1.1,3.9,1.5,5.9l60.6-9.7C318.3,186.5,317.1,181.6,315.6,176.9z"/>
+  							      <path id="orange" class="chart__segment parking" fill="#F1B43D" d="M256.7,194.3l58.5-18.5c-1.7-5.1-3.7-10-6.1-14.7l-54.8,27.6C255.3,190.5,256,192.4,256.7,194.3z"/>
+  							      <path id="orange" class="chart__segment planings" fill="#F1B43D" d="M226.8,164.3c1.9,0.7,3.8,1.5,5.6,2.4l27.6-54.8c-4.6-2.3-9.5-4.4-14.4-6.1L226.8,164.3z"/>
+  							      <path id="orange" class="chart__segment status " fill="#F1B43D" d="M259.5,208.8h61.4c-0.1-5.5-0.6-10.9-1.5-16.2l-60.6,9.7C259.2,204.5,259.4,206.6,259.5,208.8z"/>
+  							      <path id="green-btn" class="chart__segment density-on-the-floor" fill="#63BF76" d="M219.6,162.3c2.1,0.4,4.1,0.9,6.1,1.6l18.8-58.4c-5-1.6-10.2-2.9-15.5-3.8L219.6,162.3z"/>
+  							      <path id="red" class="chart__segment ceilings" fill="#E12742" d="M275,121c-4.4-3.2-9.1-6.1-13.9-8.6l-27.6,54.8c1.9,1,3.8,2.2,5.6,3.5L275,121z"/>
+  							      <path id="orange" class="chart__segment medicine" fill="#F1B43D" d="M184.8,253c-7.1-4.3-13.1-10.3-17.3-17.5L115,267c9.5,16.1,23,29.5,39.1,39L184.8,253z"/>
+  							      <path id="orange" class="chart__segment pop-density" fill="#F1B43D" d="M228,101.4c-5.4-0.9-10.9-1.3-16.4-1.4v61.3c2.4,0.1,4.7,0.3,7,0.7L228,101.4z"/>
+  							      <path id="green" class="chart__segment district" fill="#63BF76" d="M185.6,167.9c6.9-3.9,14.7-6.3,23.2-6.5V100c-19.3,0.2-37.5,5.4-53.2,14.4L185.6,167.9z"/>
+  							      <path id="green" class="chart__segment gr-transportation" fill="#63BF76" d="M252.8,235.5c-4.2,7.1-10.1,13.1-17.2,17.4l30.6,53.2c16.4-9.7,30.1-23.4,39.7-39.9L252.8,235.5z"/>
+  							      <path id="green" class="chart__segment auto" fill="#63BF76" d="M253.4,234.5l53.1,30.7c9-15.9,14.2-34.2,14.4-53.8h-61.3C259.4,219.9,257.2,227.7,253.4,234.5z"/>
+  							      <path id="orange"class="chart__segment metro" fill="#F1B43D" d="M234.7,253.5c-6.9,3.9-14.7,6.3-23.2,6.5v61.3c19.5-0.2,37.9-5.5,53.7-14.6L234.7,253.5z"/>
+  							      <path id="green" class="chart__segment area" fill="#63BF76" d="M167.3,186.3L114.6,155c-9.3,15.9-14.7,34.2-15,53.8h61.4C161.2,200.6,163.5,193,167.3,186.3z"/>
+  							      <path id="green" class="chart__segment entertainment" fill="#63BF76" d="M155,306.6c15.9,9.1,34.2,14.5,53.8,14.7V260c-8.4-0.2-16.2-2.5-23-6.4L155,306.6z"/>
+  							      <path id="orange" class="chart__segment location" fill="#F1B43D" d="M167.9,185.3c4.1-6.9,9.9-12.7,16.8-16.8L154.6,115c-16.2,9.4-29.8,22.9-39.4,39L167.9,185.3z"/>
+  							      <path id="green" class="chart__segment trading" fill="#63BF76" d="M167,234.5c-3.8-6.8-6-14.6-6.1-23H99.5c0.1,19.9,5.5,38.5,14.8,54.6L167,234.5z"/>
+  							      <text id="engineering" transform="matrix(1 0 0 1 302.5096 132.433)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Инженерия</text>
+  							      <text id="courtyard" transform="matrix(1 0 0 1 312.8096 144.7329)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Двор</text>
+  							      <text id="security" transform="matrix(1 0 0 1 322.8097 159.1768)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Безопасность</text>
+  							      <text id="parking" transform="matrix(1 0 0 1 328.0096 172.9129)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Парковка</text>
+  							      <text id="technology" transform="matrix(1 0 0 1 332.0096 186.5204)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Технология</text>
+  							      <text id="status" transform="matrix(1 0 0 1 336.0096 200.7078)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Статус</text>
+  							      <text id="auto" transform="matrix(1 0 0 1 332.0096 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Автомобиль</text>
+  							      <text id="gr-transportation" transform="matrix(1 0 0 1 293.0096 301.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Наземный транспорт</text>
+  							      <text id="metro" transform="matrix(1 0 0 1 235.6353 335.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Метро</text>
+  							      <text id="entertainment" transform="matrix(1 0 0 1 120.5096 335.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Развлечения</text>
+  							      <text id="medicine" transform="matrix(1 0 0 1 72.8096 301.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Медицина</text>
+  							      <text id="trading" transform="matrix(1 0 0 1 47.9097 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Торговля</text>
+  							      <text id="area" transform="matrix(1 0 0 1 52.5096 176.8618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Участок</text>
+  							      <text id="location" transform="matrix(1 0 0 1 81.5096 121.6568)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Локация</text>
+  							      <text id="district" transform="matrix(1 0 0 1 145.0096 92.6496)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Район</text>
+  							      <text id="pop-density" transform="matrix(1 0 0 1 224.2491 83.7261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Плотность заселения</text>
+  							      <text id="density-on-the-floor" transform="matrix(1 0 0 1 250.196 95.9261)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Плотность на этаже</text>
+  							      <text id="planings" transform="matrix(1 0 0 1 272.1563 107.6261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Планировки</text>
+  							      <text id="ceilings" transform="matrix(1 0 0 1 289.8222 120.3845)" fill="#E12742" font-family="Raleway-Light" font-size="10">Потолки</text>
+  							   </g>
+  							   <circle id="total-raiting" cx="210.3" cy="210.6" r="46.3"/>
+  							   <text transform="matrix(1 0 0 1 239.9404 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Комфорт</text>
+  							   <text transform="matrix(1 0 0 1 112.956 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Экология</text>
+  							   <text transform="matrix(1 0 0 1 85.456 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Инфраструктура</text>
+  							   <text transform="matrix(1 0 0 1 238.3602 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Транспорт</text>
+  							   <text transform="matrix(1 0 0 1 175.7646 199.2046)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="9.0288">Общий рейтинг</text>
+  							   <text transform="matrix(1 0 0 1 181.9622 227.2689)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="28.4008">88%</text>
+                <svg>              </div>
             </div>
 
           </div>
@@ -328,16 +407,16 @@
             <div class="container container--flex">
               <div class="slider-item__info">
                 <div class="item-select">
-                  <form class="item-descr__form" action="#" method="post">
-                    <select>
-                      <option value="1">19 февраля</option>
-                      <option value="2">26 февраля</option>
-                      <option value="3">2 марта</option>
-                      <option value="1">9 марта</option>
-                      <option value="2">16 марта</option>
-                      <option value="3">24 марта</option>
-                    </select>
-                  </form>
+                  <div class="item-select__popup popup">
+                    <div class="popup__current popup-open-btn popup__current--close">19.02</div>
+                    <ul class="popup__list date-list popup-list">
+                      <li class="date-list__item">19 февраля</li>
+                      <li class="date-list__item">26 февраля</li>
+                      <li class="date-list__item">9 марта</li>
+                      <li class="date-list__item">16 марта</li>
+                      <li class="date-list__item">24 марта</li>
+                    </ul>
+                  </div>
                   <p class="item-descr__slogan">Новостройка недели</p>
                 </div>
                 <h2 class="item-descr__header">ЖК «YOUПитер»</h2>
@@ -392,19 +471,70 @@
               </div>
 
               <div class="slider-item__graph">
-                <svg class="features__icon  features__icon--house" width="605" height="605" aria-labelledby="title-icon-house" role="presentation">
-                  <title id="title-icon-house">Иконка дома</title>
-                  <use xlink:href="#raiting-info"></use>
-                </svg>
+                <svg id="chart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  							    width="605px" height="605px" viewBox="0 0 420.3 420.3" enable-background="new 0 0 420.3 420.3" xml:space="preserve">
+  							   <path opacity="0.3" d="M211.5,161.2V0c115,0.7,208.1,93.8,208.8,208.8H259.5C258.6,182.8,237.6,161.8,211.5,161.2z M208.8,161.2V0
+  							      C93.8,0.7,0.7,93.8,0,208.8h160.9C161.8,182.8,182.8,161.9,208.8,161.2z M160.9,211.5H0c0.7,115,93.8,208.1,208.8,208.8V259.9
+  							      C182.5,259.2,161.4,237.9,160.9,211.5z M211.5,259.9v160.4c115-0.7,208.1-93.8,208.8-208.8H259.5C259,237.9,237.8,259.2,211.5,259.9
+  							      z"/>
+  							   <g>
+  							      <path id="green" class="chart__segment engineering" fill="#63BF76" d="M287.8,131.8c-3.7-3.6-7.7-7-11.9-10.1l-36,49.7c1.7,1.3,3.3,2.6,4.8,4.1L287.8,131.8z"/>
+  							      <path id="green" class="chart__segment courtyard" class="chart__segment" fill="#63BF76" d="M298.8,144.4c-3.1-4.2-6.5-8.1-10.2-11.8l-43.1,43.7c1.4,1.5,2.8,3,4,4.7L298.8,144.4z"/>
+  							      <path id="green" class="chart__segment security" fill="#63BF76" d="M250.2,181.8c1.3,1.9,2.6,3.8,3.6,5.9l54.8-27.6c-2.7-5.2-5.7-10.1-9.1-14.8L250.2,181.8z"/>
+  							      <path id="green" class="chart__segment technology" fill="#63BF76" d="M315.6,176.9l-58.5,18.5c0.6,1.9,1.1,3.9,1.5,5.9l60.6-9.7C318.3,186.5,317.1,181.6,315.6,176.9z"/>
+  							      <path id="orange" class="chart__segment parking" fill="#F1B43D" d="M256.7,194.3l58.5-18.5c-1.7-5.1-3.7-10-6.1-14.7l-54.8,27.6C255.3,190.5,256,192.4,256.7,194.3z"/>
+  							      <path id="orange" class="chart__segment planings" fill="#F1B43D" d="M226.8,164.3c1.9,0.7,3.8,1.5,5.6,2.4l27.6-54.8c-4.6-2.3-9.5-4.4-14.4-6.1L226.8,164.3z"/>
+  							      <path id="orange" class="chart__segment status " fill="#F1B43D" d="M259.5,208.8h61.4c-0.1-5.5-0.6-10.9-1.5-16.2l-60.6,9.7C259.2,204.5,259.4,206.6,259.5,208.8z"/>
+  							      <path id="green-btn" class="chart__segment density-on-the-floor" fill="#63BF76" d="M219.6,162.3c2.1,0.4,4.1,0.9,6.1,1.6l18.8-58.4c-5-1.6-10.2-2.9-15.5-3.8L219.6,162.3z"/>
+  							      <path id="red" class="chart__segment ceilings" fill="#E12742" d="M275,121c-4.4-3.2-9.1-6.1-13.9-8.6l-27.6,54.8c1.9,1,3.8,2.2,5.6,3.5L275,121z"/>
+  							      <path id="orange" class="chart__segment medicine" fill="#F1B43D" d="M184.8,253c-7.1-4.3-13.1-10.3-17.3-17.5L115,267c9.5,16.1,23,29.5,39.1,39L184.8,253z"/>
+  							      <path id="orange" class="chart__segment pop-density" fill="#F1B43D" d="M228,101.4c-5.4-0.9-10.9-1.3-16.4-1.4v61.3c2.4,0.1,4.7,0.3,7,0.7L228,101.4z"/>
+  							      <path id="green" class="chart__segment district" fill="#63BF76" d="M185.6,167.9c6.9-3.9,14.7-6.3,23.2-6.5V100c-19.3,0.2-37.5,5.4-53.2,14.4L185.6,167.9z"/>
+  							      <path id="green" class="chart__segment gr-transportation" fill="#63BF76" d="M252.8,235.5c-4.2,7.1-10.1,13.1-17.2,17.4l30.6,53.2c16.4-9.7,30.1-23.4,39.7-39.9L252.8,235.5z"/>
+  							      <path id="green" class="chart__segment auto" fill="#63BF76" d="M253.4,234.5l53.1,30.7c9-15.9,14.2-34.2,14.4-53.8h-61.3C259.4,219.9,257.2,227.7,253.4,234.5z"/>
+  							      <path id="orange"class="chart__segment metro" fill="#F1B43D" d="M234.7,253.5c-6.9,3.9-14.7,6.3-23.2,6.5v61.3c19.5-0.2,37.9-5.5,53.7-14.6L234.7,253.5z"/>
+  							      <path id="green" class="chart__segment area" fill="#63BF76" d="M167.3,186.3L114.6,155c-9.3,15.9-14.7,34.2-15,53.8h61.4C161.2,200.6,163.5,193,167.3,186.3z"/>
+  							      <path id="green" class="chart__segment entertainment" fill="#63BF76" d="M155,306.6c15.9,9.1,34.2,14.5,53.8,14.7V260c-8.4-0.2-16.2-2.5-23-6.4L155,306.6z"/>
+  							      <path id="orange" class="chart__segment location" fill="#F1B43D" d="M167.9,185.3c4.1-6.9,9.9-12.7,16.8-16.8L154.6,115c-16.2,9.4-29.8,22.9-39.4,39L167.9,185.3z"/>
+  							      <path id="green" class="chart__segment trading" fill="#63BF76" d="M167,234.5c-3.8-6.8-6-14.6-6.1-23H99.5c0.1,19.9,5.5,38.5,14.8,54.6L167,234.5z"/>
+  							      <text id="engineering" transform="matrix(1 0 0 1 302.5096 132.433)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Инженерия</text>
+  							      <text id="courtyard" transform="matrix(1 0 0 1 312.8096 144.7329)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Двор</text>
+  							      <text id="security" transform="matrix(1 0 0 1 322.8097 159.1768)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Безопасность</text>
+  							      <text id="parking" transform="matrix(1 0 0 1 328.0096 172.9129)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Парковка</text>
+  							      <text id="technology" transform="matrix(1 0 0 1 332.0096 186.5204)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Технология</text>
+  							      <text id="status" transform="matrix(1 0 0 1 336.0096 200.7078)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Статус</text>
+  							      <text id="auto" transform="matrix(1 0 0 1 332.0096 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Автомобиль</text>
+  							      <text id="gr-transportation" transform="matrix(1 0 0 1 293.0096 301.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Наземный транспорт</text>
+  							      <text id="metro" transform="matrix(1 0 0 1 235.6353 335.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Метро</text>
+  							      <text id="entertainment" transform="matrix(1 0 0 1 120.5096 335.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Развлечения</text>
+  							      <text id="medicine" transform="matrix(1 0 0 1 72.8096 301.3618)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Медицина</text>
+  							      <text id="trading" transform="matrix(1 0 0 1 47.9097 241.3618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Торговля</text>
+  							      <text id="area" transform="matrix(1 0 0 1 52.5096 176.8618)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Участок</text>
+  							      <text id="location" transform="matrix(1 0 0 1 81.5096 121.6568)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Локация</text>
+  							      <text id="district" transform="matrix(1 0 0 1 145.0096 92.6496)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Район</text>
+  							      <text id="pop-density" transform="matrix(1 0 0 1 224.2491 83.7261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Плотность заселения</text>
+  							      <text id="density-on-the-floor" transform="matrix(1 0 0 1 250.196 95.9261)" fill="#63BF76" font-family="Raleway-Light" font-size="10">Плотность на этаже</text>
+  							      <text id="planings" transform="matrix(1 0 0 1 272.1563 107.6261)" fill="#F1B43D" font-family="Raleway-Light" font-size="10">Планировки</text>
+  							      <text id="ceilings" transform="matrix(1 0 0 1 289.8222 120.3845)" fill="#E12742" font-family="Raleway-Light" font-size="10">Потолки</text>
+  							   </g>
+  							   <circle id="total-raiting" cx="210.3" cy="210.6" r="46.3"/>
+  							   <text transform="matrix(1 0 0 1 239.9404 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Комфорт</text>
+  							   <text transform="matrix(1 0 0 1 112.956 51.1496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Экология</text>
+  							   <text transform="matrix(1 0 0 1 85.456 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Инфраструктура</text>
+  							   <text transform="matrix(1 0 0 1 238.3602 366.6496)" fill="#FFFFFF" font-family="Raleway-Light" font-weight="bold" font-size="14">Транспорт</text>
+  							   <text transform="matrix(1 0 0 1 175.7646 199.2046)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="9.0288">Общий рейтинг</text>
+  							   <text transform="matrix(1 0 0 1 181.9622 227.2689)" fill="#FFFFFF" font-family="Raleway-Bold" font-weight="bold" font-size="28.4008">88%</text>
+                <svg>
               </div>
             </div>
 
           </div>
         </div>
-
       </div>
 
-      <section class="about">
+    <!-- About project section -->
+
+    <section class="about">
         <div class="container">
 
           <div class="about-wrapper">
@@ -423,12 +553,6 @@
         </div>
       </section>
 
-
-    <!-- About project section -->
-
-
-
-
     <!-- Project-blog section -->
 
     <section class="blog">
@@ -444,24 +568,25 @@
             <p class="blog-description__paragraph">В будущем можно подумать, чтобы делать аэросъёмку строек (может, предлагать это застройщикам, как рекламу их объекта)</p>
             <p class="blog-description__paragraph">Ещё есть мысль завести блок блогов, где будут писать те, кто купил квартиру в какой-то новостройке.	К примеру, есть ЖК «Юнтолово» на 70 тыс.чел., в лесу. Будет интересно читать, как про процесс покупки, так и про
               жизнь потом (как развивается ЖК, ведь 1 оч. уже сдали и автор там живёт, а целиком его сдадут только в 2025, и	есть те, кто ещё только рассматривает)</p>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- Feedback section -->
 
-      <!-- <section class="feedback">
+    <section class="feedback">
       <div class="container">
-      <div class="feedback-wrapper">
-      <p class="feedback-text">Подпишитесь на новости о проекте	и получите чек-лист самостоятельной	оценки новостроек</p>
-      <form class="feedback-form" action="index.html" method="post">
-      <input class="feedback-form__input" type="text" name="" value="" placeholder="Адрес почты">
-      <button class="feedback-form__btn" type="submit" name="button">Получить чек-лист!</button>
-    </form>
-  </div>
-</div>
-</section> -->
+        <div class="feedback-wrapper">
+          <p class="feedback-text">Подпишитесь на новости о проекте<br>	и получите чек-лист самостоятельной	оценки новостроек</p>
+          <form class="feedback-form" action="index.html" method="post">
+            <input class="feedback-form__input" type="text" name="" value="" placeholder="Адрес почты">
+            <button class="feedback-form__btn" type="submit" name="button">Получить чек-лист!</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
 </main>
 
 <!-- Page-footer -->
@@ -481,9 +606,9 @@
         <div class="socials-link">
           <p class="socials-link__text">Мы в социальных сетях:</p>
           <ul class="socials-link__list socials-list">
-            <li class="socials-list__item">
+            <li class="socials-list__item socials-list__item">
               <a href="#">
-                <svg class="vk-icon-ft" width="30" height="30" aria-labelledby="vk-icon" role="presentation">
+                <svg class="vk-icon-ft" width="35" height="30" aria-labelledby="vk-icon" role="presentation">
                   <title id="vk-icon">VK</title>
                   <use xlink:href="#vk-icon-ft"></use>
                 </svg>
@@ -613,13 +738,36 @@ let a = new Carousel({
 const nextBtn = document.querySelector('.js-next-btn');
 const prevBtn = document.querySelector('.js-prev-btn');
 const sliderWrap = document.querySelector('.slider-wrap-js');
+const popupOpenBtn = document.querySelector('.popup-open-btn');
+const popupList = document.querySelector('.popup-list');
+const feedbackBtn = document.querySelector('.feedback-form__btn');
 
-nextBtn.addEventListener('click', function(){
-  sliderWrap.style.transform = `translateX(-100%)`;
+function nextSlide() {
+    sliderWrap.style.transform = `translateX(-100%)`;
+}
+function prevSlide() {
+      sliderWrap.style.transform = `translateX(0%)`;
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+
+document.addEventListener('click', function(e){
+  if (e.target.matches('.popup-open-btn')) {
+    popupList.classList.toggle('date-list--open');
+  } else {
+    popupList.classList.remove('date-list--open');
+  }
 });
-prevBtn.addEventListener('click', function(){
-  sliderWrap.style.transform = `translateX(0%)`;
+
+feedbackBtn.addEventListener('click', function(e){
+  e.preventDefault();
 })
+
+
+
+
 </script>
 </body>
 </html>

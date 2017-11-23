@@ -70,16 +70,32 @@
   outline: none;
   border: none;
   margin-bottom: 12px;
+  cursor: pointer;
+  transition: all .5s;
 
     &--green {
       background-color: $link-green;
+
+      &:hover {
+        background-color: green;
+      }
     }
 
     &--orange {
       background-color: $basic-orange;
+
+      &:hover {
+        background-color: orange;
+      }
     }
 
     &--gray {
       background-color: $basic-gray;
+
+      &:hover {
+        background-color: red;
+      }
     }
+
+
 }

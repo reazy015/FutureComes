@@ -2,17 +2,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding-left: 15px;
+  padding-top: 30px;
+  padding-bottom: 58px;
 }
 .socials {
+  flex: 1 1 50%;
   display: flex;
   flex-direction: row;
+  padding-left: 70px;
+}
+.mail {
+  margin-right: 80px;
 }
 .mail__text {
   @include raleway;
   font-size: 14px;
   color: $light-gray;
+  margin-top: 25px;
 }
 .mail__link {
   @include raleway-bold;
@@ -23,6 +30,8 @@
   @include raleway;
   font-size: 14px;
   color: $light-gray;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 .socials-list {
   @include padding-list;
@@ -30,16 +39,35 @@
   flex-direction: row;
   justify-content: space-around;
 }
+.socials-list__item {
+  margin-right: 40px;
+
+  &:nth-of-type(2) {
+    margin-right: 23px;
+  }
+
+  &--vk {
+    margin-top: 5px;
+  }
+
+  &--inst {
+    margin-top: 1px;
+  }
+}
+.vk-icon-ft {
+  margin-top: 5px;
+}
 .copyright {
   background-color: $background-copyright;
-  padding-top: 29px;
-  padding-bottom: 29px;
+  padding-top: 14px;
+  padding-left: 31px;
+  padding-bottom: 14px;
 }
 .copyright__date {
   @include raleway;
   font-size: 14px;
   color: $light-gray;
-  margin-right: 20px;
+  margin-right: 35px;
 }
 .copyright__cond {
   @include raleway;
