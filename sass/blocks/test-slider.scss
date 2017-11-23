@@ -1,6 +1,5 @@
 .slider {
   width: 100%;
-  overflow: hidden;
 }
 .slider-item {
   position: relative;
@@ -11,12 +10,20 @@
 
   padding-top: 115px;
   padding-right: 60px;
+  padding-bottom: 507px;
 }
-.slider-item__image {
+.slider-item__image-wrapper {
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
+  background-image: url('../img/slide-image1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-item__image {
   width: 100%;
 }
 .slider-item__info {

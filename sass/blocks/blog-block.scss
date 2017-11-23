@@ -7,43 +7,53 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 80px;
-  padding-bottom: 76px;
+
+  padding-left: 10px;
+  padding-top: 68px;
+  padding-bottom: 72px;
 }
 .blog-intro__link {
   @include raleway-bold;
+  display: block;
   color: $basic-white;
+  font-size: 20px;
   background-color: $link-green;
   margin: 0;
-  padding: 16px 60px 10px 14px;
+  padding: 10px 0 7px 21px;
   position: relative;
   text-decoration: none;
+  width: 177px;
 
   &:after{
     display: block;
     position: absolute;
     content: '';
     top: 0;
-    right: -42px;
-    border: 22px solid transparent;
-    border-left: 20px solid $link-green;
+    right: -38px;
+    border: 20px solid transparent;
+    border-left: 18px solid $link-green;
   }
 }
 .blog-intro {
-  max-width: 50%;
+  flex: 1 1 50%;
+  padding-top: 11px;
 }
 .blog-intro__header {
   @include raleway-bold;
   font-size: 40px;
   color: $basic-white;
+  margin-top: 14px;
+  margin-bottom: 40px;
 }
 .blog-intro__date {
   @include raleway;
   font-size: 14px;
   color: $basic-gray;
+  padding-left: 10px;
 }
 .blog-description {
-  max-width: 50%;
+  flex: 1 1 50%;
+  padding-left: 15px;
 }
 .blog-description__paragraph {
   @include raleway;

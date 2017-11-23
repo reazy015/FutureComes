@@ -1,15 +1,28 @@
 .about {
+  position: relative;
+  margin-top: -446px;
+  padding-top: 63px;
+  padding-bottom: 105px;
   background-color: rgba(21, 29, 37, 0.8);
-  padding-top: 65px;
-  padding-bottom: 115px;
 }
 .about-wrapper {
   display: flex;
   flex-direction: row;
-  padding-right: 75px;
+  justify-content: flex-start;
+  position: relative;
+
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: -123px;
+    right: 280px;
+    border: 35px solid transparent;
+    border-bottom: 25px solid rgba(21, 29, 37, 0.8);
+  }
 }
 .about-description {
-  max-width: 71%;
+  flex: 1 1 63%;
 }
 .about-description__header {
   @include raleway-bold;
@@ -19,7 +32,7 @@
   padding-left: 15px;
   margin: 0;
   margin-bottom: 30px;
-  max-width: 70%;
+  max-width: 75%;
 }
 .about-description__text {
   @include raleway;
@@ -35,13 +48,15 @@
   font-weight: normal;
   font-size: 20px;
   color: $basic-white;
-  max-width: 29%;
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
 }
 .about-feedback__header {
   margin: 0;
   padding-top: 5px;
   margin-bottom: 33px;
-  max-width: 100%;
+  width: 83%;
 }
 .about-feedback__btn {
   @include raleway-bold;
