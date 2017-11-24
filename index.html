@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>FutureComes</title>
-  <link rel="preload" href="fonts/Raleway-Bold/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="fonts/Raleway-Light/Raleway-Ligt.woff" as="font" type="font/woff" crossorigin>
+  <!-- <link rel="preload" href="fonts/Raleway-Bold/Raleway-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Raleway-Light/Raleway-Ligt.woff" as="font" type="font/woff" crossorigin> -->
   <link rel="preload" href="fonts/RobotoBold/RobotoBold.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/RobotoRegular/RobotoRegular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/Satisfy/Satisfy.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
   HTML {
     background-repeat: no-repeat;
     background-position:  50% 0;
     /* Mobile layout by default */
     background-image: url( "img/myplace_index.png" );
-  }
-</style>
+  } -->
+<!-- </style>
 <link href="/pixel-glass/styles.css" rel="stylesheet">
-<script src="/pixel-glass/script.js"></script>
+<script src="/pixel-glass/script.js"></script> -->
 <!-- // Pixel Glass -->
 </head>
 <body class="page">
@@ -652,88 +652,6 @@
     </div>
   </div>
 </footer>
-<!-- <script type="text/javascript">
-(function() {
-"use strict";
-
-function Carousel(setting) {
-if(document.querySelector(setting.wrap) === null) {
-console.error(`Carousel not fount selector ${setting.wrap}`);
-return;
-}
-
-/* Scope privates methods and properties */
-let privates = {};
-
-
-/* Public methods */
-// Prev slide
-this.prev_slide = () => {
---privates.opt.position;
-
-if(privates.opt.position < 0) {
-privates.sel.wrap.classList.add('s-notransition');
-privates.opt.position = privates.opt.max_position - 1;
-}
-
-privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
-};
-
-
-// Next slide
-this.next_slide = () => {
-++privates.opt.position;
-
-if(privates.opt.position >= privates.opt.max_position) {
-privates.opt.position = 0;
-}
-
-privates.sel.wrap.style["transform"] = `translateX(-${privates.opt.position}00%)`;
-};
-
-
-
-/* Privates properties */
-privates.setting = setting;
-
-privates.sel = {
-"main": document.querySelector(privates.setting.main),
-"wrap": document.querySelector(privates.setting.wrap),
-"children": document.querySelector(privates.setting.wrap).children,
-"prev": document.querySelector(privates.setting.prev),
-"next": document.querySelector(privates.setting.next)
-};
-
-privates.opt = {
-"position": 0,
-"max_position": document.querySelector(privates.setting.wrap).children.length
-};
-
-// Control
-if(privates.sel.prev !== null) {
-privates.sel.prev.addEventListener('click', () => {
-this.prev_slide();
-});
-}
-
-if(privates.sel.next !== null) {
-privates.sel.next.addEventListener('click', () => {
-this.next_slide();
-});
-}
-
-}
-
-
-let a = new Carousel({
-"main": ".slider-js",
-"wrap": ".slider-wrap-js",
-"prev": ".js-prev-btn",
-"next": ".js-next-btn"
-});
-
-})();
-</script> -->
 <script type="text/javascript">
 const nextBtn = document.querySelector('.js-next-btn');
 const prevBtn = document.querySelector('.js-prev-btn');
@@ -743,29 +661,26 @@ const popupList = document.querySelector('.popup-list');
 const feedbackBtn = document.querySelector('.feedback-form__btn');
 
 function nextSlide() {
-    sliderWrap.style.transform = `translateX(-100%)`;
+  sliderWrap.style.transform = `translateX(-100%)`;
 }
 function prevSlide() {
-      sliderWrap.style.transform = `translateX(0%)`;
+  sliderWrap.style.transform = `translateX(0%)`;
 }
 
-nextBtn.addEventListener('click', nextSlide);
-prevBtn.addEventListener('click', prevSlide);
-
-
-document.addEventListener('click', function(e){
+function popupSwitch(e) {
   if (e.target.matches('.popup-open-btn')) {
     popupList.classList.toggle('date-list--open');
   } else {
     popupList.classList.remove('date-list--open');
   }
-});
+}
 
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+document.addEventListener('click', popupSwitch)
 feedbackBtn.addEventListener('click', function(e){
   e.preventDefault();
-})
-
-
+});
 
 
 </script>
