@@ -546,7 +546,7 @@
             <div class="about-feedback">
               <h4 class="about-feedback__header">Поделитесь, насколько полезной кажется вам наша система оценки новостроек:</h4>
               <button class="about-feedback__btn about-feedback__btn--green">Удобно!</button>
-              <button class="about-feedback__btn about-feedback__btn--orange">Я знаю, как его улучшить</button>
+              <button class="about-feedback__btn about-feedback__btn--orange popup-switch-btn">Я знаю, как его улучшить</button>
               <button class="about-feedback__btn about-feedback__btn--gray">Не нравится :-(</button>
             </div>
           </div>
@@ -652,6 +652,18 @@
     </div>
   </div>
 </footer>
+<div class="update-popup">
+  <div class="update-popup__window window">
+    <h2 class="window__header">&#8212; Я знаю, как улучшить систему оценок!</h2>
+    <form class="window-form" action="index.html" method="post">
+      <p class="window-form__address">Адрес почты</p>
+      <input class="window-form__input" type="text" name="mail" value="Email">
+      <p class="window-form__about">Расскажите, по каким критериям вы оцениваете новостройку, для вас важно и о чем вы хотите получить больше достоверной информации</p>
+      <textarea class="window-form__text-howto" name="howto" rows="8" cols="55" placeholder="Ваше сообщение"></textarea>
+      <button class="window-form__submit-btn" type="submit" name="button">Отправить нам сообщение</button><span class="window-form__thx">Спасибо!</span>
+    </form>
+  </div>
+</div>
 <script type="text/javascript">
 const nextBtn = document.querySelector('.js-next-btn');
 const prevBtn = document.querySelector('.js-prev-btn');
@@ -659,6 +671,10 @@ const sliderWrap = document.querySelector('.slider-wrap-js');
 const popupOpenBtn = document.querySelector('.popup-open-btn');
 const popupList = document.querySelector('.popup-list');
 const feedbackBtn = document.querySelector('.feedback-form__btn');
+const popupSendFormSwBtn = document.querySelector('.popup-switch-btn');
+const popupSendFormMain = document.querySelector('.update-popup');
+const popupSendFormWindow = document.querySelector('.update-popup__window');
+const popupSendFormSbmtBtn = document.querySelector('.window-form__submit-btn');
 
 function nextSlide() {
   sliderWrap.style.transform = `translateX(-100%)`;
@@ -675,12 +691,31 @@ function popupSwitch(e) {
   }
 }
 
+function openSendForm() {
+  popupSendFormMain.classList.toggle('popup-open');
+  setTimeout(function(){
+    popupSendFormWindow.classList.toggle('window-shown');
+  }, 300);
+}
+
+popupSendFormMain.addEventListener('click', function(e){
+    if (e.target.matches('.update-popup')) {
+      popupSendFormMain.classList.remove('popup-open');
+      popupSendFormWindow.classList.remove('window-shown');
+    }
+});
+
+popupSendFormSwBtn.addEventListener('click', openSendForm);
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
 document.addEventListener('click', popupSwitch)
+
 feedbackBtn.addEventListener('click', function(e){
   e.preventDefault();
 });
+popupSendFormSbmtBtn.addEventListener('click', function(e){
+  e.preventDefault();
+})
 
 
 </script>

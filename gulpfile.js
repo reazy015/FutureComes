@@ -19,6 +19,10 @@ var concat = require("gulp-concat");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
+var vfs = require('vinyl-fs');
+var converter = require('sass-convert');
+
+
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")

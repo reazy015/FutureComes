@@ -1,0 +1,78 @@
+.page {
+  position: relative;
+}
+.update-popup {
+  @include raleway;
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(1,1,1,.8);
+  z-index: 10;
+}
+.window {
+  position: relative;
+  left: 100%;
+  top: 35%;
+  width: 580px;
+  background-color: white;
+  padding-top: 27px;
+  padding-left: 75px;
+  padding-left: 75px;
+  padding-bottom: 41px;
+  border-radius: 2px;
+  transition: all .5s;
+}
+.window__header {
+  @include raleway-bold;
+  font-size: 14px;
+  color: $orange;
+  margin-bottom: 34px;
+}
+.window-form {
+  font-size: 14px;
+}
+.window-form__input {
+  padding: 12px;
+  border: 1px solid $border-gray;
+  border-radius: 2px;
+  margin-bottom: 34px;
+}
+.window-form__about {
+  padding-right: 150px;
+  margin-bottom: 17px;
+}
+.window-form__text-howto {
+  resize: none;
+  border: 1px solid $border-gray;
+  border-radius: 2px;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+.window-form__submit-btn {
+  @include raleway-bold;
+  border: none;
+  background-color: $link-green;
+  border-radius: 21px;
+  color: $basic-white;
+  padding: 15px 28px;
+  margin-right: 18px;
+  transition: all .5s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: green;
+  }
+}
+.window-form__thx {
+  @include raleway-bold;
+  color: $link-green;
+}
+.popup-open {
+  display: block;
+}
+.window-shown {
+  left: 50%;
+  margin-left: -290px;  
+}
