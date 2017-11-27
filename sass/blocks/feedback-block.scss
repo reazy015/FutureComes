@@ -45,6 +45,7 @@
   border: none;
   cursor: pointer;
   outline: none;
+  transition: all .3s;
 
   &:after{
     display: block;
@@ -54,5 +55,14 @@
     right: -36px;
     border: 21px solid transparent;
     border-left: 15px solid $link-green;
+    transition: .3s;
+  }
+
+  &:hover {
+    background-color: $basic-hover
+  }
+
+  &:hover:after {
+    border-left: 15px solid $basic-hover;
   }
 }

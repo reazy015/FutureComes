@@ -23,6 +23,7 @@
   position: relative;
   text-decoration: none;
   width: 177px;
+  transition: all .3s;
 
   &:after{
     display: block;
@@ -32,6 +33,14 @@
     right: -38px;
     border: 20px solid transparent;
     border-left: 18px solid $link-green;
+    transition: all .3s;
+  }
+
+  &:hover {
+    background-color: $basic-hover;
+  }
+  &:hover:after {
+    border-left: 18px solid $basic-hover;
   }
 }
 .blog-intro {

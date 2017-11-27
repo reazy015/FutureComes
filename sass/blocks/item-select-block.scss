@@ -35,6 +35,11 @@
   padding: 8px 0px 9px 12px;
   position: relative;
   cursor: pointer;
+  transition: all .5s;
+
+  &:hover {
+    background-color: $basic-hover;
+  }
 }
 .popup__current--close {
     transition: transform .5s;
