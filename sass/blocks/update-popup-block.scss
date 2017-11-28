@@ -38,6 +38,7 @@
   border: 1px solid $border-gray;
   border-radius: 2px;
   margin-bottom: 34px;
+  width: 50%;
 }
 .window-form__about {
   padding-right: 150px;
@@ -60,6 +61,7 @@
   margin-right: 18px;
   transition: all .5s;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     background-color: green;
@@ -74,5 +76,5 @@
 }
 .window-shown {
   left: 50%;
-  margin-left: -290px;  
+  margin-left: -290px;
 }
